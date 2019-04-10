@@ -265,7 +265,6 @@ total <- c(apple,google)
 for (i in 1:permlength) ## This is the iterations
 {
   ind_A <-  sample.int(length(_ _ _), size = _ _ _, replace = _ _ _)
-  ind_B <-  sample.int(length(_ _ _), size = _ _ _, replace = _ _ _)
   prm_apple <-  total[_ _ _]
   prm_google <- total[_ _ _]
   diff_mean[i] = mean(prm_google) - mean(prm_apple) 

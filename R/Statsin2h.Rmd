@@ -262,10 +262,9 @@ diff_mean= vector(length = length(permlength)) # This is an empty vector where w
 total <- c(apple,google)
 for (i in 1:permlength) ## This is the iterations
 {
-  ind_A <-  sample.int(length(total), size = length(apple), replace = TRUE)
-  ind_B <-  sample.int(length(total), size = length(google), replace = TRUE)
+  ind_A <-  sample.int(length(total), size = length(apple), replace = FALSE)
   prm_apple <-  total[ind_A]
-  prm_google <- total[ind_B]
+  prm_google <- total[-ind_A]
   diff_mean[i] = mean(prm_google) - mean(prm_apple) 
 }
 ```

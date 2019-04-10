@@ -275,13 +275,9 @@ $(document).ready(function () {
 <p>In this case, we are going to use the packages ggplot2, tidyr, dplyr, stringr, readr and nortest.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShnZ3Bsb3QyKSAjIEZvciB2aXN1YWxpc2F0aW9uXG5saWJyYXJ5KHRpZHlyKSAjIFRvIHRpZHkgdGhlIGRhdGFcbmxpYnJhcnkoZHBseXIpICMgVG8gbWFuaXB1bGF0ZSB0aGUgZGF0YSBmcmFtZXNcbmxpYnJhcnkoc3RyaW5ncikgIyBUbyBtYW5pcHVsYXRlIG5vbi1udW1lcmljYWwgZGF0YVxubGlicmFyeShyZWFkcikgIyBUbyByZWFkIGRhdGEgOilcbmxpYnJhcnkobm9ydGVzdCkgIyBUbyB0ZXN0IHRoZSBub3JtYWxpdHkgb2YgdGhlIGRhdGFcbmBgYCJ9 -->
-<pre class="r"><code>library(ggplot2) # For visualisation
-library(tidyr) # To tidy the data
-library(dplyr) # To manipulate the data frames
-library(stringr) # To manipulate non-numerical data
-library(readr) # To read data :)
-library(nortest) # To test the normality of the data</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlicmFyeShnZ3Bsb3QyKSAjIEZvciB2aXN1YWxpc2F0aW9uXG5saWJyYXJ5KHRpZHlyKSAjIFRvIHRpZHkgdGhlIGRhdGFcbmxpYnJhcnkoZHBseXIpICMgVG8gbWFuaXB1bGF0ZSB0aGUgZGF0YSBmcmFtZXNcbmxpYnJhcnkoc3RyaW5ncikgIyBUbyBtYW5pcHVsYXRlIG5vbi1udW1lcmljYWwgZGF0YVxubGlicmFyeShyZWFkcikgIyBUbyByZWFkIGRhdGEgOilcbmxpYnJhcnkobm9ydGVzdCkgIyBUbyB0ZXN0IHRoZSBub3JtYWxpdHkgb2YgdGhlIGRhdGFcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r library(ggplot2) # For visualisation library(tidyr) # To tidy the data library(dplyr) # To manipulate the data frames library(stringr) # To manipulate non-numerical data library(readr) # To read data :) library(nortest) # To test the normality of the data</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -293,23 +289,17 @@ library(nortest) # To test the normality of the data</code></pre>
 <p>Load the data from the folder Stats in your Desktop, this data is from the website Kaggle. Kaggle is an extraordinary repository of data and good fun data competitions. The data from the Apple Store can be found <a href="https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps">here</a> and the data from Google Store can be found <a href="https://www.kaggle.com/lava18/google-play-store-apps">here</a>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBPbmNlIHRoZSBmaWxlIGBnb29nbGVwbGF5c3RvcmUuY3N2YCBpcyBzYXZlZCwgd2UgbmVlZCB0byBsb2FkIGl0IGludG8gUiB1c2luZyByZWFkX2NzdlxuIyBVc2UgdGhlIGZ1bmN0aW9uIHJlYWRfY3N2KCkgdG8gcmVhZCB0aGUgZmlsZSwgaW5zaWRlIHRoYXQgZnVuY3Rpb24gYWRkIHRoZSBwYXRoIG9mIHRoZSBmaWxlIFxuR29vZ2xlIDwtIHJlYWRfY3N2KF8gXyBfKVxuIyBMZXQncyBvYnNlcnZlIHRoZSBmaXJzdCBzZXZlbiBlbnRyaWVzXG5oZWFkKF8gXyBfLDcpXG5gYGAifQ== -->
-<pre class="r"><code># Once the file `googleplaystore.csv` is saved, we need to load it into R using read_csv
-# Use the function read_csv() to read the file, inside that function add the path of the file 
-Google &lt;- read_csv(_ _ _)
-# Let's observe the first seven entries
-head(_ _ _,7)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBPbmNlIHRoZSBmaWxlIGBnb29nbGVwbGF5c3RvcmUuY3N2YCBpcyBzYXZlZCwgd2UgbmVlZCB0byBsb2FkIGl0IGludG8gUiB1c2luZyByZWFkX2NzdlxuIyBVc2UgdGhlIGZ1bmN0aW9uIHJlYWRfY3N2KCkgdG8gcmVhZCB0aGUgZmlsZSwgaW5zaWRlIHRoYXQgZnVuY3Rpb24gYWRkIHRoZSBwYXRoIG9mIHRoZSBmaWxlIFxuR29vZ2xlIDwtIHJlYWRfY3N2KF8gXyBfKVxuIyBMZXQncyBvYnNlcnZlIHRoZSBmaXJzdCBzZXZlbiBlbnRyaWVzXG5oZWFkKF8gXyBfLDcpXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r # Once the file <code>googleplaystore.csv</code> is saved, we need to load it into R using read_csv # Use the function read_csv() to read the file, inside that function add the path of the file Google &lt;- read_csv(_ _ <em>) # Let’s observe the first seven entries head(</em> _ _,7)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBPbmNlIHRoZSBmaWxlIGBnb29nbGVwbGF5c3RvcmUuY3N2YCBpcyBzYXZlZCwgd2UgbmVlZCB0byBsb2FkIGl0IGludG8gUiB1c2luZyByZWFkX2NzdlxuIyBVc2UgdGhlIGZ1bmN0aW9uIHJlYWRfY3N2KCkgdG8gcmVhZCB0aGUgZmlsZSwgaW5zaWRlIHRoYXQgZnVuY3Rpb24gYWRkIHRoZSBwYXRoIG9mIHRoZSBmaWxlIFxuQXBwbGUgPC0gIF8gXyBfXG4jIExldCdzIG9ic2VydmUgdGhlIGZpcnN0IHNldmVuIGVudHJpZXNcbmhlYWQoXyBfIF8pXG5gYGAifQ== -->
-<pre class="r"><code># Once the file `googleplaystore.csv` is saved, we need to load it into R using read_csv
-# Use the function read_csv() to read the file, inside that function add the path of the file 
-Apple &lt;-  _ _ _
-# Let's observe the first seven entries
-head(_ _ _)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBPbmNlIHRoZSBmaWxlIGBnb29nbGVwbGF5c3RvcmUuY3N2YCBpcyBzYXZlZCwgd2UgbmVlZCB0byBsb2FkIGl0IGludG8gUiB1c2luZyByZWFkX2NzdlxuIyBVc2UgdGhlIGZ1bmN0aW9uIHJlYWRfY3N2KCkgdG8gcmVhZCB0aGUgZmlsZSwgaW5zaWRlIHRoYXQgZnVuY3Rpb24gYWRkIHRoZSBwYXRoIG9mIHRoZSBmaWxlIFxuQXBwbGUgPC0gIF8gXyBfXG4jIExldCdzIG9ic2VydmUgdGhlIGZpcnN0IHNldmVuIGVudHJpZXNcbmhlYWQoXyBfIF8pXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r # Once the file <code>googleplaystore.csv</code> is saved, we need to load it into R using read_csv # Use the function read_csv() to read the file, inside that function add the path of the file Apple &lt;- _ _ <em> # Let’s observe the first seven entries head(</em> _ _)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -337,13 +327,9 @@ head(_ _ _)</code></pre>
 <p>Overwrite the subsets in the original variables.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMZXQncyBzdWJzZXQgdGhlIGRhdGFmcmFtZSBBcHBsZSBieSBvbmx5IHNlbGVjdGluZyB0aGUgdmFyaWFibGVzIGMoJ3ByaW1lX2dlbnJlJywgJ3VzZXJfcmF0aW5nJywgJ3JhdGluZ19jb3VudF90b3QnLCAncHJpY2UnKVxuI0FwcGxlIDwtICBBcHBsZVtjKCdwcmltZV9nZW5yZScsICd1c2VyX3JhdGluZycsICdyYXRpbmdfY291bnRfdG90JywgJ3ByaWNlJyldXG4jIEFub3RoZXIgbWV0aG9kIHdpdGggc2VsZWN0XG5BcHBsZSA8LSAgc2VsZWN0KEFwcGxlLCBjKHByaW1lX2dlbnJlLCB1c2VyX3JhdGluZywgcmF0aW5nX2NvdW50X3RvdCwgcHJpY2UpKVxuIyBMZXQncyBjaGVjayB0aGUgZmlyc3QgdGhyZWUgZW50cmllc1xuaGVhZChBcHBsZSlcbmBgYCJ9 -->
-<pre class="r"><code># Let's subset the dataframe Apple by only selecting the variables c('prime_genre', 'user_rating', 'rating_count_tot', 'price')
-#Apple &lt;-  Apple[c('prime_genre', 'user_rating', 'rating_count_tot', 'price')]
-# Another method with select
-Apple &lt;-  select(Apple, c(prime_genre, user_rating, rating_count_tot, price))
-# Let's check the first three entries
-head(Apple)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBMZXQncyBzdWJzZXQgdGhlIGRhdGFmcmFtZSBBcHBsZSBieSBvbmx5IHNlbGVjdGluZyB0aGUgdmFyaWFibGVzIGMoJ3ByaW1lX2dlbnJlJywgJ3VzZXJfcmF0aW5nJywgJ3JhdGluZ19jb3VudF90b3QnLCAncHJpY2UnKVxuI0FwcGxlIDwtICBBcHBsZVtjKCdwcmltZV9nZW5yZScsICd1c2VyX3JhdGluZycsICdyYXRpbmdfY291bnRfdG90JywgJ3ByaWNlJyldXG4jIEFub3RoZXIgbWV0aG9kIHdpdGggc2VsZWN0XG5BcHBsZSA8LSAgc2VsZWN0KEFwcGxlLCBjKHByaW1lX2dlbnJlLCB1c2VyX3JhdGluZywgcmF0aW5nX2NvdW50X3RvdCwgcHJpY2UpKVxuIyBMZXQncyBjaGVjayB0aGUgZmlyc3QgdGhyZWUgZW50cmllc1xuaGVhZChBcHBsZSlcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r # Let’s subset the dataframe Apple by only selecting the variables c(‘prime_genre’, ‘user_rating’, ‘rating_count_tot’, ‘price’) #Apple &lt;- Apple[c(‘prime_genre’, ‘user_rating’, ‘rating_count_tot’, ‘price’)] # Another method with select Apple &lt;- select(Apple, c(prime_genre, user_rating, rating_count_tot, price)) # Let’s check the first three entries head(Apple)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0VlN1MDdETUJTOWFaS1dwcThJRUdQL29CbFlZQU1rcERKQ0dlZ1dtZFJ0STFJN2NoeGVVd2Y0R0piT2pPeXMvQUF6U093TURiYmpGSm9GUzg3MU9mYTkxK2M0ZytQaHJqTjBBS0FDcG0xQXhSUkxxeUkrQmxoUWwvRVd3TnlTckppdW1GVzlZZmZSRENjYU5FOFpIYVVCRDY5RGZxZTUyZ1ZHZklxWmhodm5VeHJISVpsb1hCL2dNV2FZQkhpOUlFQmJkam1VdmNSWXhXWUpiNjdqVmQ3YnF3Skg1dE9KaWpWN1gwWFhlRkRSMjVtcnZKZnVmQzJ2OC9IWWZUNzdoSC9Hd2RkaSsvNjl2eWpaWkFjUlNoSnRVVUU2SThTUk4yWkNWK2w0bmRFYmoyaTlMV20vdkV5V1pkL2x1c1VoVnoxQlRqWmlGczZ3UDhHRUZlWTEwZ1F6bnlIK2E3Q2JJeitnS2VFK3A3d29LYktGNlFETFVxOGFqWGxJaWVoV2tROXVsOVFZckVSMFVpSnZOK29GMDVSYzlmYWtZcldkajVaZVYvK3NyYnlsbGVsU3RpNVZ4V1FTa3RXZkVLRkxIR25RRmxZcEV6eHhiMUtJY0FTYmVFSVVLczQ1QVkwS1JtbUQ1UStyL1o1eDNnSUFBQT09In0= -->
 <div data-pagedtable="false">
@@ -356,11 +342,9 @@ head(Apple)</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMZXQncyBzdWJzZXQgdGhlIGRhdGFmcmFtZSBHb29nbGUgYnkgb25seSBzZWxlY3RpbmcgdGhlIHZhcmlhYmxlcyBjKCdDYXRlZ29yeScsICdSYXRpbmcnLCAnUmV2aWV3cycsICdQcmljZScpXG5Hb29nbGUgPC0gXyBfIF9cbiMgTGV0J3MgY2hlY2sgdGhlIGZpcnN0IHRocmVlIGVudHJpZXNcbmhlYWQoXyBfIF8pXG5gYGAifQ== -->
-<pre class="r"><code># Let's subset the dataframe Google by only selecting the variables c('Category', 'Rating', 'Reviews', 'Price')
-Google &lt;- _ _ _
-# Let's check the first three entries
-head(_ _ _)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBMZXQncyBzdWJzZXQgdGhlIGRhdGFmcmFtZSBHb29nbGUgYnkgb25seSBzZWxlY3RpbmcgdGhlIHZhcmlhYmxlcyBjKCdDYXRlZ29yeScsICdSYXRpbmcnLCAnUmV2aWV3cycsICdQcmljZScpXG5Hb29nbGUgPC0gXyBfIF9cbiMgTGV0J3MgY2hlY2sgdGhlIGZpcnN0IHRocmVlIGVudHJpZXNcbmhlYWQoXyBfIF8pXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r # Let’s subset the dataframe Google by only selecting the variables c(‘Category’, ‘Rating’, ‘Reviews’, ‘Price’) Google &lt;- _ _ <em> # Let’s check the first three entries head(</em> _ _)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -370,59 +354,54 @@ head(_ _ _)</code></pre>
 <p>In this part let’s figure out whether the variables that we selected contain errors/mistakes in the expected datatype.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBVc2UgdGhlIGZ1bmN0aW9uIGdsaW1wc2VcbiMjIENoZWNrIG91dCB0aGUgZGF0YSB0eXBlcyBvZiB0aGUgZGF0YSBmcmFtZSBBcHBsZS4gQXJlIHRoZSBkYXRhIHR5cGVzIGV4cGVjdGVkP1xuZ2xpbXBzZShBcHBsZSlcbmBgYCJ9 -->
-<pre class="r"><code># Use the function glimpse
-## Check out the data types of the data frame Apple. Are the data types expected?
-glimpse(Apple)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBVc2UgdGhlIGZ1bmN0aW9uIGdsaW1wc2VcbiMjIENoZWNrIG91dCB0aGUgZGF0YSB0eXBlcyBvZiB0aGUgZGF0YSBmcmFtZSBBcHBsZS4gQXJlIHRoZSBkYXRhIHR5cGVzIGV4cGVjdGVkP1xuZ2xpbXBzZShBcHBsZSlcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r # Use the function glimpse ## Check out the data types of the data frame Apple. Are the data types expected? glimpse(Apple)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>As you can see all the data types of <code>Apple</code> are expected. What about the data types of <code>Google</code>?</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBDaGVjayBvdXQgdGhlIGRhdGEgdHlwZXMgb2YgdGhlIGRhdGEgZnJhbWUgR29vZ2xlLiBBcmUgdGhlIGRhdGEgdHlwZXMgZXhwZWN0ZWQ/XG5nbGltcHNlKF8gXyBfKVxuYGBgIn0= -->
-<pre class="r"><code># Check out the data types of the data frame Google. Are the data types expected?
-glimpse(_ _ _)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBDaGVjayBvdXQgdGhlIGRhdGEgdHlwZXMgb2YgdGhlIGRhdGEgZnJhbWUgR29vZ2xlLiBBcmUgdGhlIGRhdGEgdHlwZXMgZXhwZWN0ZWQ/XG5nbGltcHNlKF8gXyBfKVxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r # Check out the data types of the data frame Google. Are the data types expected? glimpse(_ _ _)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Are the data types expected? Check out the unique values of the column Price in the data set Google</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBVc2UgdGhlIGZ1bmN0aW9uIHVuaXF1ZSgpIHRvIHRoZSBjb2x1bW4gUHJpY2UgaW4gdGhlIGRhdGEgc2V0IEdvb2dsZVxudW5pcXVlKEdvb2dsZSRfIF8gXylcbmBgYCJ9 -->
-<pre class="r"><code># Use the function unique() to the column Price in the data set Google
-unique(Google$_ _ _)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBVc2UgdGhlIGZ1bmN0aW9uIHVuaXF1ZSgpIHRvIHRoZSBjb2x1bW4gUHJpY2UgaW4gdGhlIGRhdGEgc2V0IEdvb2dsZVxudW5pcXVlKEdvb2dsZSRfIF8gXylcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r # Use the function unique() to the column Price in the data set Google unique(Google$_ _ _)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Interesting… There is a price called <code>Everyone</code>. That is a massive mistake. Let’s check the data points that have the price value as <code>Everyone</code>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMZXQncyBjaGVjayB3aGF0IGlzIHRoZSBkYXRhIHBvaW50IHdoaWNoIGNvbnRhaW5zIHRoZSBwcmljZSAnRXZlcnlvbmUnIHVzaW5nIGEgc3Vic2V0IG9mIEdvb2dsZS5cbiMjIFN1YnNldCBieSB0aGUgY29sdW1uIFByaWNlIHRoYXQgZXF1YWxzIHRvIGBFdmVyeW9uZWAuXG5maWx0ZXIoR29vZ2xlLCBQcmljZT09IF8gXyBfKVxuYGBgIn0= -->
-<pre class="r"><code># Let's check what is the data point which contains the price 'Everyone' using a subset of Google.
-## Subset by the column Price that equals to `Everyone`.
-filter(Google, Price== _ _ _)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBMZXQncyBjaGVjayB3aGF0IGlzIHRoZSBkYXRhIHBvaW50IHdoaWNoIGNvbnRhaW5zIHRoZSBwcmljZSAnRXZlcnlvbmUnIHVzaW5nIGEgc3Vic2V0IG9mIEdvb2dsZS5cbiMjIFN1YnNldCBieSB0aGUgY29sdW1uIFByaWNlIHRoYXQgZXF1YWxzIHRvIGBFdmVyeW9uZWAuXG5maWx0ZXIoR29vZ2xlLCBQcmljZT09IF8gXyBfKVxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r # Let’s check what is the data point which contains the price ‘Everyone’ using a subset of Google. ## Subset by the column Price that equals to <code>Everyone</code>. filter(Google, Price== _ _ _)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Now it is time to eliminate that observation.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMZXQncyBlbGltaW5hdGUgdGhhdCBwb2ludCBiZWNhdXNlIGl0IGhhcyB0aGUgd3JvbmcgaW5mb3JtYXRpb24uXG4jIyBUbyBkbyB0aGF0LCBzdWJzZXQgR29vZ2xlIGJ1dCBpbnN0ZWFkIG9mIHVzaW5nICc9PSwgaXMgZXF1YWwgdG8nIHVzZSAnaXMgZGlmZmVyZW50IGZyb20nIHdoaWNoIGlzICchPScuXG5Hb29nbGUgPC0gIGZpbHRlcihfIF8gXywgUHJpY2UgIT0gXyBfIF8pXG4jIyMgQ2hlY2sgYWdhaW4gdGhlIHVuaXF1ZSB2YWx1ZXMgb2YgUHJpY2VcbnVuaXF1ZShHb29nbGUkUHJpY2UpXG5gYGAifQ== -->
-<pre class="r"><code># Let's eliminate that point because it has the wrong information.
-## To do that, subset Google but instead of using '==, is equal to' use 'is different from' which is '!='.
-Google &lt;-  filter(_ _ _, Price != _ _ _)
-### Check again the unique values of Price
-unique(Google$Price)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBMZXQncyBlbGltaW5hdGUgdGhhdCBwb2ludCBiZWNhdXNlIGl0IGhhcyB0aGUgd3JvbmcgaW5mb3JtYXRpb24uXG4jIyBUbyBkbyB0aGF0LCBzdWJzZXQgR29vZ2xlIGJ1dCBpbnN0ZWFkIG9mIHVzaW5nICc9PSwgaXMgZXF1YWwgdG8nIHVzZSAnaXMgZGlmZmVyZW50IGZyb20nIHdoaWNoIGlzICchPScuXG5Hb29nbGUgPC0gIGZpbHRlcihfIF8gXywgUHJpY2UgIT0gXyBfIF8pXG4jIyMgQ2hlY2sgYWdhaW4gdGhlIHVuaXF1ZSB2YWx1ZXMgb2YgUHJpY2VcbnVuaXF1ZShHb29nbGUkUHJpY2UpXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r # Let’s eliminate that point because it has the wrong information. ## To do that, subset Google but instead of using ‘==, is equal to’ use ‘is different from’ which is ‘!=’. Google &lt;- filter(_ _ <em>, Price != </em> _ _) ### Check again the unique values of Price unique(Google$Price)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Let’s check the data types of Google.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBDaGVjay1vdXQgdGhlIGRhdGF0eXBlcyBvZiBHb29nbGVcbmdsaW1wc2UoR29vZ2xlKVxuYGBgIn0= -->
-<pre class="r"><code># Check-out the datatypes of Google
-glimpse(Google)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBDaGVjay1vdXQgdGhlIGRhdGF0eXBlcyBvZiBHb29nbGVcbmdsaW1wc2UoR29vZ2xlKVxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r # Check-out the datatypes of Google glimpse(Google)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -432,11 +411,9 @@ glimpse(Google)</code></pre>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBVc2UgdGhlIGZ1bmN0aW9uIHNhcHBseSB0byBlYWNoIGVsZW1lbnQgb2YgR29vZ2xlJFByaWNlLCBhcHBseSB0byBlYWNoIGVsZW1lbnQgdGhlIGZ1bmN0aW9uIHN0cl9yZXBsYWNlXG4jIyBVc2UgcGF0dGVybiA9ICdcXFxcJCcsIHJlcGxhY2VtZW50PSAnJ1xuR29vZ2xlJFByaWNlIDwtICBzYXBwbHkoR29vZ2xlJF8gXyBfLCBzdHJfcmVwbGFjZSwgXyBfIF8gPSAnXFxcXCQnLCByZXBsYWNlbWVudD0gJycpXG51bmlxdWUoR29vZ2xlJFByaWNlKVxuYGBgIn0= -->
-<pre class="r"><code># Use the function sapply to each element of Google$Price, apply to each element the function str_replace
-## Use pattern = '\\$', replacement= ''
-Google$Price &lt;-  sapply(Google$_ _ _, str_replace, _ _ _ = '\\$', replacement= '')
-unique(Google$Price)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBVc2UgdGhlIGZ1bmN0aW9uIHNhcHBseSB0byBlYWNoIGVsZW1lbnQgb2YgR29vZ2xlJFByaWNlLCBhcHBseSB0byBlYWNoIGVsZW1lbnQgdGhlIGZ1bmN0aW9uIHN0cl9yZXBsYWNlXG4jIyBVc2UgcGF0dGVybiA9ICdcXFxcJCcsIHJlcGxhY2VtZW50PSAnJ1xuR29vZ2xlJFByaWNlIDwtICBzYXBwbHkoR29vZ2xlJF8gXyBfLCBzdHJfcmVwbGFjZSwgXyBfIF8gPSAnXFxcXCQnLCByZXBsYWNlbWVudD0gJycpXG51bmlxdWUoR29vZ2xlJFByaWNlKVxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r # Use the function sapply to each element of Google<span class="math inline">\(Price, apply to each element the function str_replace ## Use pattern = '\\\)</span>‘, replacement=’‘Google<span class="math inline">\(Price &lt;- sapply(Google\)</span>_ _ <em>, str_replace, </em> _ _ =’\<span class="math inline">\(', replacement= '') unique(Google\)</span>Price)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -445,29 +422,27 @@ unique(Google$Price)</code></pre>
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBBcHBseSBhcy5udW1lcmljKCkgdG8gR29vZ2xlJFByaWNlLCBzYXZlIGl0IGFzIHRoZSBQcmljZSBjb2x1bW4gaW4gR29vZ2xlXG5Hb29nbGUkUHJpY2UgPC0gYXMubnVtZXJpYyhHb29nbGUkXyBfIF8pXG4jIExldCdzIGhhdmUgYSBnbGltcHNlIG9mIEdvb2dsZSBkYXRhIHR5cGVzXG5nbGltcHNlKEdvb2dsZSlcbmBgYCJ9 -->
-<pre class="r"><code># Apply as.numeric() to Google$Price, save it as the Price column in Google
-Google$Price &lt;- as.numeric(Google$_ _ _)
-# Let's have a glimpse of Google data types
-glimpse(Google)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBBcHBseSBhcy5udW1lcmljKCkgdG8gR29vZ2xlJFByaWNlLCBzYXZlIGl0IGFzIHRoZSBQcmljZSBjb2x1bW4gaW4gR29vZ2xlXG5Hb29nbGUkUHJpY2UgPC0gYXMubnVtZXJpYyhHb29nbGUkXyBfIF8pXG4jIExldCdzIGhhdmUgYSBnbGltcHNlIG9mIEdvb2dsZSBkYXRhIHR5cGVzXG5nbGltcHNlKEdvb2dsZSlcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r # Apply as.numeric() to Google<span class="math inline">\(Price, save it as the Price column in Google Google\)</span>Price &lt;- as.numeric(Google$_ _ _) # Let’s have a glimpse of Google data types glimpse(Google)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>The column <code>Reviews</code> is still an object column, we need that column to be a numeric column.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBUcmFuc2Zvcm0gdGhlIGNvbHVtbiBgUmV2aWV3c2AgdG8gbnVtZXJpYyB1c2luZyB0aGUgZnVuY3Rpb25zIGFzLm51bWVyaWNcbkdvb2dsZSRSZXZpZXdzIDwtIGFzLm51bWVyaWMoXyBfIF8pXG5gYGAifQ== -->
-<pre class="r"><code># Transform the column `Reviews` to numeric using the functions as.numeric
-Google$Reviews &lt;- as.numeric(_ _ _)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBUcmFuc2Zvcm0gdGhlIGNvbHVtbiBgUmV2aWV3c2AgdG8gbnVtZXJpYyB1c2luZyB0aGUgZnVuY3Rpb25zIGFzLm51bWVyaWNcbkdvb2dsZSRSZXZpZXdzIDwtIGFzLm51bWVyaWMoXyBfIF8pXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r # Transform the column <code>Reviews</code> to numeric using the functions as.numeric Google$Reviews &lt;- as.numeric(_ _ _)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Now let’s have a glimpse of the data</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMZXQncyBjaGVjayB0aGUgZGF0YSB0eXBlcyBvZiBHb29nbGUgYWdhaW5cbmdsaW1wc2UoR29vZ2xlKVxuYGBgIn0= -->
-<pre class="r"><code># Let's check the data types of Google again
-glimpse(Google)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBMZXQncyBjaGVjayB0aGUgZGF0YSB0eXBlcyBvZiBHb29nbGUgYWdhaW5cbmdsaW1wc2UoR29vZ2xlKVxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r # Let’s check the data types of Google again glimpse(Google)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -477,19 +452,17 @@ glimpse(Google)</code></pre>
 <p>Let’s create a new column called <code>platform</code> where the value for the Apple dataframe is ‘apple’, and for Google is ‘google’</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMZXQncyBjcmVhdGUgdGhlIGNvbHVtbiBwbGF0Zm9ybSBpbiBBcHBsZSwgd2hpY2ggYWxsIHZhbHVlcyBhcmUgJ2FwcGxlJ1xuQXBwbGUkcGxhdGZvcm0gPSAnYXBwbGUnXG5oZWFkKEFwcGxlKVxuYGBgIn0= -->
-<pre class="r"><code># Let's create the column platform in Apple, which all values are 'apple'
-Apple$platform = 'apple'
-head(Apple)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBMZXQncyBjcmVhdGUgdGhlIGNvbHVtbiBwbGF0Zm9ybSBpbiBBcHBsZSwgd2hpY2ggYWxsIHZhbHVlcyBhcmUgJ2FwcGxlJ1xuQXBwbGUkcGxhdGZvcm0gPSAnYXBwbGUnXG5oZWFkKEFwcGxlKVxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r # Let’s create the column platform in Apple, which all values are ‘apple’ Apple$platform = ‘apple’ head(Apple)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMZXQncyBjcmVhdGUgdGhlIGNvbHVtbiBwbGF0Zm9ybSBpbiBHb29nbGUsIHdoaWNoIGFsbCB2YWx1ZXMgYXJlICdnb29nbGUnXG5Hb29nbGUkXyBfIF8gPSAnZ29vZ2xlJ1xuaGVhZChfIF8gXylcbmBgYCJ9 -->
-<pre class="r"><code># Let's create the column platform in Google, which all values are 'google'
-Google$_ _ _ = 'google'
-head(_ _ _)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBMZXQncyBjcmVhdGUgdGhlIGNvbHVtbiBwbGF0Zm9ybSBpbiBHb29nbGUsIHdoaWNoIGFsbCB2YWx1ZXMgYXJlICdnb29nbGUnXG5Hb29nbGUkXyBfIF8gPSAnZ29vZ2xlJ1xuaGVhZChfIF8gXylcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r # Let’s create the column platform in Google, which all values are ‘google’ Google$_ _ _ = ‘google’ head(_ _ _)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -500,17 +473,18 @@ head(_ _ _)</code></pre>
 <p>This is an important step to unify the two data sets.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBDaGFuZ2luZyB0aGUgY29sdW1uIG5hbWVzIG9mIEFwcGxlIHdpdGggdGhlIGNvbHVtbnMgbmFtZXMgb2YgR29vZ2xlXG5jb2xuYW1lcyhBcHBsZSkgPC0gIGNvbG5hbWVzKEdvb2dsZSlcbmBgYCJ9 -->
-<pre class="r"><code># Changing the column names of Apple with the columns names of Google
-colnames(Apple) &lt;-  colnames(Google)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBDaGFuZ2luZyB0aGUgY29sdW1uIG5hbWVzIG9mIEFwcGxlIHdpdGggdGhlIGNvbHVtbnMgbmFtZXMgb2YgR29vZ2xlXG5jb2xuYW1lcyhBcHBsZSkgPC0gIGNvbG5hbWVzKEdvb2dsZSlcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r # Changing the column names of Apple with the columns names of Google colnames(Apple) &lt;- colnames(Google)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Let’s check the column names of Apple</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29sbmFtZXMoXyBfIF8pXG5gYGAifQ== -->
-<pre class="r"><code>colnames(_ _ _)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuY29sbmFtZXMoXyBfIF8pXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r colnames(_ _ _)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -521,45 +495,36 @@ colnames(Apple) &lt;-  colnames(Google)</code></pre>
 <p>Combine the two data sets into a single data frame called <code>df</code></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBDb21iaW5lIHRoZSBkYXRhIHNldHMgdXNpbmcgdGhlIGZ1bmN0aW9uICdiaW5kX3Jvd3MnXG4jIFRoZSBhcmd1bWVudHMgb2YgdGhhdCBmdW5jdGlvbiBhcmUgdGhlIHR3byBkYXRhIHNldHMgdGhhdCB5b3Ugd2FudCB0byBjb21iaW5lXG5kZiA8LSBiaW5kX3Jvd3MoXyBfIF8sIF8gXyBfKVxuI0xldCdzIGNoZWNrIGhvdyB0aGUgZGF0YSBwb2ludHMgYXJlIGNvbmNhdGVuYXRlZCBcbnNhbXBsZV9uKF8gXyBfLCAxMClcbmBgYCJ9 -->
-<pre class="r"><code># Combine the data sets using the function 'bind_rows'
-# The arguments of that function are the two data sets that you want to combine
-df &lt;- bind_rows(_ _ _, _ _ _)
-#Let's check how the data points are concatenated 
-sample_n(_ _ _, 10)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBDb21iaW5lIHRoZSBkYXRhIHNldHMgdXNpbmcgdGhlIGZ1bmN0aW9uICdiaW5kX3Jvd3MnXG4jIFRoZSBhcmd1bWVudHMgb2YgdGhhdCBmdW5jdGlvbiBhcmUgdGhlIHR3byBkYXRhIHNldHMgdGhhdCB5b3Ugd2FudCB0byBjb21iaW5lXG5kZiA8LSBiaW5kX3Jvd3MoXyBfIF8sIF8gXyBfKVxuI0xldCdzIGNoZWNrIGhvdyB0aGUgZGF0YSBwb2ludHMgYXJlIGNvbmNhdGVuYXRlZCBcbnNhbXBsZV9uKF8gXyBfLCAxMClcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r # Combine the data sets using the function ‘bind_rows’ # The arguments of that function are the two data sets that you want to combine df &lt;- bind_rows(_ _ <em>, </em> _ <em>) #Let’s check how the data points are concatenated sample_n(</em> _ _, 10)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>As you can see there are some <code>NaN</code> values, eliminate all the <code>NaN</code> values from the table</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMZXQncyBjaGVjayBmaXJzdCB0aGUgZGltZW5zaW9ucyBvZiBkZiBiZWZvcmUgZHJvcHBpbmcgYE5hTmAgdmFsdWVzXG5wcmludChkaW0oXyBfIF8pKVxuIyBVc2UgdGhlIGZ1bmN0aW9uIC5kcm9wbmEgdG8gZWxpbWluYXRlIGFsbCB0aGUgTmFOIHZhbHVlcywgb3ZlcndyaXRlIGluIHRoZSBzYW1lIGRhdGFmcmFtZVxuZGYgPC0gZHJvcF9uYShfIF8gXylcbiMgQ2hlY2sgdGhlIGRpbWVuc2lvbnMgb2YgZGZcbl8gXyBfKF8gXyBfKF8gXyBfKSlcbmBgYCJ9 -->
-<pre class="r"><code># Let's check first the dimensions of df before dropping `NaN` values
-print(dim(_ _ _))
-# Use the function .dropna to eliminate all the NaN values, overwrite in the same dataframe
-df &lt;- drop_na(_ _ _)
-# Check the dimensions of df
-_ _ _(_ _ _(_ _ _))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBMZXQncyBjaGVjayBmaXJzdCB0aGUgZGltZW5zaW9ucyBvZiBkZiBiZWZvcmUgZHJvcHBpbmcgYE5hTmAgdmFsdWVzXG5wcmludChkaW0oXyBfIF8pKVxuIyBVc2UgdGhlIGZ1bmN0aW9uIC5kcm9wbmEgdG8gZWxpbWluYXRlIGFsbCB0aGUgTmFOIHZhbHVlcywgb3ZlcndyaXRlIGluIHRoZSBzYW1lIGRhdGFmcmFtZVxuZGYgPC0gZHJvcF9uYShfIF8gXylcbiMgQ2hlY2sgdGhlIGRpbWVuc2lvbnMgb2YgZGZcbl8gXyBfKF8gXyBfKF8gXyBfKSlcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r # Let’s check first the dimensions of df before dropping <code>NaN</code> values print(dim(_ _ <em>)) # Use the function .dropna to eliminate all the NaN values, overwrite in the same dataframe df &lt;- drop_na(</em> _ <em>) # Check the dimensions of df </em> _ <em>(</em> _ <em>(</em> _ _))</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Now let’s check how many apps have 0 reviews.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBUbyBjaGVjayBob3cgbWFueSBhcHBzIGhhdmUgMCByZXZpZXdzIHdlIGFyZSBnb2luZyB0byB1c2UgdGhlIGZ1bmN0aW9uIGRpbSBvZiB0aGUgc3Vic2V0IG9mIGRmIHdoZXJlIFJldmlld3MgPT0gMFxuZGltKGZpbHRlcihfIF8gXywgXyBfIF8gPT0gMCkpXG5gYGAifQ== -->
-<pre class="r"><code># To check how many apps have 0 reviews we are going to use the function dim of the subset of df where Reviews == 0
-dim(filter(_ _ _, _ _ _ == 0))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBUbyBjaGVjayBob3cgbWFueSBhcHBzIGhhdmUgMCByZXZpZXdzIHdlIGFyZSBnb2luZyB0byB1c2UgdGhlIGZ1bmN0aW9uIGRpbSBvZiB0aGUgc3Vic2V0IG9mIGRmIHdoZXJlIFJldmlld3MgPT0gMFxuZGltKGZpbHRlcihfIF8gXywgXyBfIF8gPT0gMCkpXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r # To check how many apps have 0 reviews we are going to use the function dim of the subset of df where Reviews == 0 dim(filter(_ _ <em>, </em> _ _ == 0))</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>929 apps do not have reviews, we need to eliminate these points!</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBFbGltaW5hdGUgdGhlIHBvaW50cyB0aGF0IGhhdmUgMCByZXZpZXdzIGJ5IHN1YnNldHRpbmcgZGYgdXNpbmcgdGhlIGV4cHJlc3Npb24gJ2RpZmZlcmVudCBmcm9tJyAhPVxuIyBPdmVyd3JpdGUgdGhhdCB2YXJpYWJsZVxuZGYgPC0gIF8gXyBfKF8gXyBfLCBfIF8gXyAhPSAwKVxuc3VtbWFyeShkZilcbmBgYCJ9 -->
-<pre class="r"><code># Eliminate the points that have 0 reviews by subsetting df using the expression 'different from' !=
-# Overwrite that variable
-df &lt;-  _ _ _(_ _ _, _ _ _ != 0)
-summary(df)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBFbGltaW5hdGUgdGhlIHBvaW50cyB0aGF0IGhhdmUgMCByZXZpZXdzIGJ5IHN1YnNldHRpbmcgZGYgdXNpbmcgdGhlIGV4cHJlc3Npb24gJ2RpZmZlcmVudCBmcm9tJyAhPVxuIyBPdmVyd3JpdGUgdGhhdCB2YXJpYWJsZVxuZGYgPC0gIF8gXyBfKF8gXyBfLCBfIF8gXyAhPSAwKVxuc3VtbWFyeShkZilcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r # Eliminate the points that have 0 reviews by subsetting df using the expression ‘different from’ != # Overwrite that variable df &lt;- _ _ <em>(</em> _ <em>, </em> _ _ != 0) summary(df)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -571,11 +536,10 @@ summary(df)</code></pre>
 <p>We need a summary of the column <code>Rating</code> but separated by the different platforms</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMZXQncyBncm91cCBieSB1c2luZyB0aGUgZnVuY3Rpb24gJ2dyb3VwX2J5JywgZ3JvdXBpbmcgYnkgdGhlIHBsYXRmb3JtLiBTYXZlIGl0IGFzIGdkZi5cbmdkZiA8LSBncm91cF9ieShkZiwgcGxhdGZvcm0pXG4jIExldCdzIHVzZSB0aGUgZnVuY3Rpb24gc3VtbWFyaXNlLCBjYWxjdWxhdGluZyB0aGUgZm9sbG93aW5nIG1ldHJpY3Mgb2YgUmF0aW5nOiBtZWFuLCBzdGFuZGFyZCBkZXZpYXRpb24sIHZhcmlhbmNlLCBhbmQgdG90YWwgb2JzZXJ2YXRpb25zICBcbnN1bW1hcmlzZShnZGYsIG1lYW5fUmF0aW5nID0gbWVhbihfIF8gXyksIHN0ZF9SYXRpbmcgPSBzZChfIF8gXyksIHZhcmlhbmNlID0gdmFyKF8gXyBfKSwgY291bnQgPSBsZW5ndGgoXyBfIF8pIClcbmBgYCJ9 -->
-<pre class="r"><code># Let's group by using the function 'group_by', grouping by the platform. Save it as gdf.
-gdf &lt;- group_by(df, platform)
-# Let's use the function summarise, calculating the following metrics of Rating: mean, standard deviation, variance, and total observations  
-summarise(gdf, mean_Rating = mean(_ _ _), std_Rating = sd(_ _ _), variance = var(_ _ _), count = length(_ _ _) )</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBMZXQncyBncm91cCBieSB1c2luZyB0aGUgZnVuY3Rpb24gJ2dyb3VwX2J5JywgZ3JvdXBpbmcgYnkgdGhlIHBsYXRmb3JtLiBTYXZlIGl0IGFzIGdkZi5cbmdkZiA8LSBncm91cF9ieShkZiwgcGxhdGZvcm0pXG4jIExldCdzIHVzZSB0aGUgZnVuY3Rpb24gc3VtbWFyaXNlLCBjYWxjdWxhdGluZyB0aGUgZm9sbG93aW5nIG1ldHJpY3Mgb2YgUmF0aW5nOiBtZWFuLCBzdGFuZGFyZCBkZXZpYXRpb24sIHZhcmlhbmNlLCBhbmQgdG90YWwgb2JzZXJ2YXRpb25zICBcbnN1bW1hcmlzZShnZGYsIG1lYW5fUmF0aW5nID0gbWVhbihfIF8gXyksIHN0ZF9SYXRpbmcgPSBzZChfIF8gXyksIHZhcmlhbmNlID0gdmFyKF8gXyBfKSwgY291bnQgPSBsZW5ndGgoXyBfIF8pIClcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r # Let’s group by using the function ‘group_by’, grouping by the platform. Save it as gdf. gdf &lt;- group_by(df, platform) # Let’s use the function summarise, calculating the following metrics of Rating: mean, standard deviation, variance, and total observations<br />
+summarise(gdf, mean_Rating = mean(_ _ <em>), std_Rating = sd(</em> _ <em>), variance = var(</em> _ <em>), count = length(</em> _ _) )</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -585,9 +549,9 @@ summarise(gdf, mean_Rating = mean(_ _ _), std_Rating = sd(_ _ _), variance = var
 <p>We need a summary of the column <code>Rating</code> but separated by the different platforms, let’s use a boxplot!</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBVc2UgYSBnZ3Bsb3QgdG8gdmlzdWxhbGlzZSB0aGUgZGlmZmVyZW5jZXMgYmV0d2VlbiBwbGF0Zm9ybXMgYW5kIFJhdGluZ1xuZ2dwbG90KGRfIF8gXykgKyBnZW9tX2JveHBsb3QoYWVzKHggPSBwbGF0Zm9ybSwgeSA9IFJhdGluZykpXG5gYGAifQ== -->
-<pre class="r"><code># Use a ggplot to visulalise the differences between platforms and Rating
-ggplot(d_ _ _) + geom_boxplot(aes(x = platform, y = Rating))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBVc2UgYSBnZ3Bsb3QgdG8gdmlzdWxhbGlzZSB0aGUgZGlmZmVyZW5jZXMgYmV0d2VlbiBwbGF0Zm9ybXMgYW5kIFJhdGluZ1xuZ2dwbG90KGRfIF8gXykgKyBnZW9tX2JveHBsb3QoYWVzKHggPSBwbGF0Zm9ybSwgeSA9IFJhdGluZykpXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r # Use a ggplot to visulalise the differences between platforms and Rating ggplot(d_ _ _) + geom_boxplot(aes(x = platform, y = Rating))</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -603,15 +567,9 @@ ggplot(d_ _ _) + geom_boxplot(aes(x = platform, y = Rating))</code></pre>
 <p>Now that the hypotheses are defined, and also the significance level, we are going to try to reject or accept the null hypothesis.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMZXQncyBjcmVhdGUgYSBzdWJzZXQgb2YgdGhlIGNvbHVtbiAnUmF0aW5nJyBieSB0aGUgZGlmZmVyZW50IHBsYXRmb3Jtcy4gXG4jIyBDYWxsIHRoZSBzdWJzZXRzICdhcHBsZScgYW5kICdnb29nbGUnIFxuYXBwbGUgPC0gZmlsdGVyKGRmLCBwbGF0Zm9ybSA9PSAnYXBwbGUnKVxuYXBwbGUgPC0gIGFzLnZlY3RvcihhcHBsZSRSYXRpbmcpXG5nb29nbGUgPC0gZmlsdGVyKGRmLCBwbGF0Zm9ybSA9PSAnZ29vZ2xlJylcbmdvb2dsZSA8LSAgYXMudmVjdG9yKGdvb2dsZSRSYXRpbmcpXG5vYnNfZGlmZiAgPC0gIG1lYW4oYXBwbGUpIC0gbWVhbihnb29nbGUpXG5vYnNfZGlmZlxuYGBgIn0= -->
-<pre class="r"><code># Let's create a subset of the column 'Rating' by the different platforms. 
-## Call the subsets 'apple' and 'google' 
-apple &lt;- filter(df, platform == 'apple')
-apple &lt;-  as.vector(apple$Rating)
-google &lt;- filter(df, platform == 'google')
-google &lt;-  as.vector(google$Rating)
-obs_diff  &lt;-  mean(apple) - mean(google)
-obs_diff</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBMZXQncyBjcmVhdGUgYSBzdWJzZXQgb2YgdGhlIGNvbHVtbiAnUmF0aW5nJyBieSB0aGUgZGlmZmVyZW50IHBsYXRmb3Jtcy4gXG4jIyBDYWxsIHRoZSBzdWJzZXRzICdhcHBsZScgYW5kICdnb29nbGUnIFxuYXBwbGUgPC0gZmlsdGVyKGRmLCBwbGF0Zm9ybSA9PSAnYXBwbGUnKVxuYXBwbGUgPC0gIGFzLnZlY3RvcihhcHBsZSRSYXRpbmcpXG5nb29nbGUgPC0gZmlsdGVyKGRmLCBwbGF0Zm9ybSA9PSAnZ29vZ2xlJylcbmdvb2dsZSA8LSAgYXMudmVjdG9yKGdvb2dsZSRSYXRpbmcpXG5vYnNfZGlmZiAgPC0gIG1lYW4oYXBwbGUpIC0gbWVhbihnb29nbGUpXG5vYnNfZGlmZlxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r # Let’s create a subset of the column ‘Rating’ by the different platforms. ## Call the subsets ‘apple’ and ‘google’ apple &lt;- filter(df, platform == ‘apple’) apple &lt;- as.vector(apple<span class="math inline">\(Rating) google &lt;- filter(df, platform == 'google') google &lt;- as.vector(google\)</span>Rating) obs_diff &lt;- mean(apple) - mean(google) obs_diff</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -621,39 +579,27 @@ obs_diff</code></pre>
 Check out more about permutations <a href="http://rasbt.github.io/mlxtend/user_guide/evaluate/permutation_test/">here</a></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1Blcm11dGF0aW9uIHRlc3QgXG5wZXJtbGVuZ3RoID0gMTAwICMgdGhpcyBpcyB0aGUgbnVtYmVyIG9mIGl0ZXJhdGlvbnMgdGhhdCB3ZSBhcmUgZ29pbmcgdG8gcGVybXV0ZVxuZGlmZl9tZWFuPSB2ZWN0b3IobGVuZ3RoID0gbGVuZ3RoKHBlcm1sZW5ndGgpKSAjIFRoaXMgaXMgYW4gZW1wdHkgdmVjdG9yIHdoZXJlIHdlIGFyZSBnb2luZyB0byBzdG9yZSB0aGUgbWVhbiBkaWZmZXJlbmNlcyBcbnRvdGFsIDwtIGMoYXBwbGUsZ29vZ2xlKVxuZm9yIChpIGluIDE6cGVybWxlbmd0aCkgIyMgVGhpcyBpcyB0aGUgaXRlcmF0aW9uc1xue1xuICBpbmRfQSA8LSAgc2FtcGxlLmludChsZW5ndGgodG90YWwpLCBzaXplID0gXyBfIF8sIHJlcGxhY2UgPSBUUlVFKVxuICBpbmRfQiA8LSAgc2FtcGxlLmludChsZW5ndGgodG90YWwpLCBzaXplID0gXyBfIF8sIHJlcGxhY2UgPSBUUlVFKVxuICBwcm1fYXBwbGUgPC0gIHRvdGFsW18gXyBfXVxuICBwcm1fZ29vZ2xlIDwtIHRvdGFsW18gXyBfXVxuICBkaWZmX21lYW5baV0gPSBtZWFuKHBybV9nb29nbGUpIC0gbWVhbihwcm1fYXBwbGUpIFxufVxuYGBgIn0= -->
-<pre class="r"><code>#Permutation test 
-permlength = 100 # this is the number of iterations that we are going to permute
-diff_mean= vector(length = length(permlength)) # This is an empty vector where we are going to store the mean differences 
-total &lt;- c(apple,google)
-for (i in 1:permlength) ## This is the iterations
-{
-  ind_A &lt;-  sample.int(length(total), size = _ _ _, replace = TRUE)
-  ind_B &lt;-  sample.int(length(total), size = _ _ _, replace = TRUE)
-  prm_apple &lt;-  total[_ _ _]
-  prm_google &lt;- total[_ _ _]
-  diff_mean[i] = mean(prm_google) - mean(prm_apple) 
-}</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuI1Blcm11dGF0aW9uIHRlc3QgXG5wZXJtbGVuZ3RoID0gMTAwICMgdGhpcyBpcyB0aGUgbnVtYmVyIG9mIGl0ZXJhdGlvbnMgdGhhdCB3ZSBhcmUgZ29pbmcgdG8gcGVybXV0ZVxuZGlmZl9tZWFuPSB2ZWN0b3IobGVuZ3RoID0gbGVuZ3RoKHBlcm1sZW5ndGgpKSAjIFRoaXMgaXMgYW4gZW1wdHkgdmVjdG9yIHdoZXJlIHdlIGFyZSBnb2luZyB0byBzdG9yZSB0aGUgbWVhbiBkaWZmZXJlbmNlcyBcbnRvdGFsIDwtIGMoYXBwbGUsZ29vZ2xlKVxuZm9yIChpIGluIDE6cGVybWxlbmd0aCkgIyMgVGhpcyBpcyB0aGUgaXRlcmF0aW9uc1xue1xuICBpbmRfQSA8LSAgc2FtcGxlLmludChsZW5ndGgodG90YWwpLCBzaXplID0gXyBfIF8sIHJlcGxhY2UgPSBUUlVFKVxuICBpbmRfQiA8LSAgc2FtcGxlLmludChsZW5ndGgodG90YWwpLCBzaXplID0gXyBfIF8sIHJlcGxhY2UgPSBUUlVFKVxuICBwcm1fYXBwbGUgPC0gIHRvdGFsW18gXyBfXVxuICBwcm1fZ29vZ2xlIDwtIHRvdGFsW18gXyBfXVxuICBkaWZmX21lYW5baV0gPSBtZWFuKHBybV9nb29nbGUpIC0gbWVhbihwcm1fYXBwbGUpIFxufVxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r #Permutation test permlength = 100 # this is the number of iterations that we are going to permute diff_mean= vector(length = length(permlength)) # This is an empty vector where we are going to store the mean differences total &lt;- c(apple,google) for (i in 1:permlength) ## This is the iterations { ind_A &lt;- sample.int(length(total), size = _ _ <em>, replace = TRUE) ind_B &lt;- sample.int(length(total), size = </em> _ _, replace = TRUE) prm_apple &lt;- total[_ _ _] prm_google &lt;- total[_ _ _] diff_mean[i] = mean(prm_google) - mean(prm_apple) }</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Now let’s have a look of the null distribution</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnVsbF9kaXN0IDwtICBhcy5kYXRhLmZyYW1lKGRpZmZfbWVhbilcbmdncGxvdChudWxsX2Rpc3QpK2dlb21faGlzdG9ncmFtKGFlcyhkaWZmX21lYW4pKVxuYGBgIn0= -->
-<pre class="r"><code>null_dist &lt;-  as.data.frame(diff_mean)
-ggplot(null_dist)+geom_histogram(aes(diff_mean))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubnVsbF9kaXN0IDwtICBhcy5kYXRhLmZyYW1lKGRpZmZfbWVhbilcbmdncGxvdChudWxsX2Rpc3QpK2dlb21faGlzdG9ncmFtKGFlcyhkaWZmX21lYW4pKVxuYGBgXG5gYGAifQ== -->
+<p><code>r</code>r null_dist &lt;- as.data.frame(diff_mean) ggplot(null_dist)+geom_histogram(aes(diff_mean))</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Now time to calculate the p-value associated to our observation! We observed an average difference of -0.1420605</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0hvdyBtYW55IG9ic2VydmF0aW9ucyBhcmUgbW9yZSBuZWdhdGl2ZSB0aGFuIC0wLjE0MjA2MDVcbm1vcmVfbmVnYXRpdmUgPC0gIGxlbmd0aChfIF8gX1tfIF8gXyA8IG9ic19kaWZmXSlcbnBfdmFsdWUgPC0gbW9yZV9uZWdhdGl2ZS9wZXJtbGVuZ3RoXG5wX3ZhbHVlXG5gYGAifQ== -->
-<pre class="r"><code>#How many observations are more negative than -0.1420605
-more_negative &lt;-  length(_ _ _[_ _ _ &lt; obs_diff])
-p_value &lt;- more_negative/permlength
-p_value</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuI0hvdyBtYW55IG9ic2VydmF0aW9ucyBhcmUgbW9yZSBuZWdhdGl2ZSB0aGFuIC0wLjE0MjA2MDVcbm1vcmVfbmVnYXRpdmUgPC0gIGxlbmd0aChfIF8gX1tfIF8gXyA8IG9ic19kaWZmXSlcbnBfdmFsdWUgPC0gbW9yZV9uZWdhdGl2ZS9wZXJtbGVuZ3RoXG5wX3ZhbHVlXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r #How many observations are more negative than -0.1420605 more_negative &lt;- length(_ _ _[_ _ _ &lt; obs_diff]) p_value &lt;- more_negative/permlength p_value</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -674,9 +620,9 @@ p_value</code></pre>
 <p>Let’s use a Student’s t-test to check if there are differences between the app reviews left by Apple and Google, to do that we are going to use the function t.test</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBVc2UgdGhlIGZ1bmN0aW9uIHQudGVzdCwgaW4gdGhlIHBhcmFtZXRlcnMgdHlwZSBhcHBsZSBhbmQgZ29vZ2xlLCBhbHNvIHRoZSBwYXJhbWV0ZXIgdmFyLmVxdWFsIHRvIFRSVUVcbnQudGVzdChfIF8gXywgXyBfIF8sIHZhci5lcXVhbCA9IFRSVUUpXG5gYGAifQ== -->
-<pre class="r"><code># Use the function t.test, in the parameters type apple and google, also the parameter var.equal to TRUE
-t.test(_ _ _, _ _ _, var.equal = TRUE)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBVc2UgdGhlIGZ1bmN0aW9uIHQudGVzdCwgaW4gdGhlIHBhcmFtZXRlcnMgdHlwZSBhcHBsZSBhbmQgZ29vZ2xlLCBhbHNvIHRoZSBwYXJhbWV0ZXIgdmFyLmVxdWFsIHRvIFRSVUVcbnQudGVzdChfIF8gXywgXyBfIF8sIHZhci5lcXVhbCA9IFRSVUUpXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r # Use the function t.test, in the parameters type apple and google, also the parameter var.equal to TRUE t.test(_ _ <em>, </em> _ _, var.equal = TRUE)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -684,9 +630,9 @@ t.test(_ _ _, _ _ _, var.equal = TRUE)</code></pre>
 <p>Let’s check the equal variance assumption</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmFyKGFwcGxlKVxudmFyKGdvb2dsZSlcbmBgYCJ9 -->
-<pre class="r"><code>var(apple)
-var(google)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxudmFyKGFwcGxlKVxudmFyKGdvb2dsZSlcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r var(apple) var(google)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -695,43 +641,44 @@ var(google)</code></pre>
 <p>As you can see Student’s t-test assumes that the variances between groups are equal. This is not the case (check the analytical summary), we can still use Welch’s t-test using the same function that we used before.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBUbyBydW4gYSBXZWxjaCB0ZXN0IFxudC50ZXN0KF8gXyBfLCBfIF8gXywgdmFyLmVxdWFsID0gRkFMU0UpXG5gYGAifQ== -->
-<pre class="r"><code># To run a Welch test 
-t.test(_ _ _, _ _ _, var.equal = FALSE)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBUbyBydW4gYSBXZWxjaCB0ZXN0IFxudC50ZXN0KF8gXyBfLCBfIF8gXywgdmFyLmVxdWFsID0gRkFMU0UpXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r # To run a Welch test t.test(_ _ <em>, </em> _ _, var.equal = FALSE)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Both tests (Student’s t-test and Welch’s t-test) assume that the data is normally distributed, we can test that looking at the distribution or using the function ad.test (Anderson-Darling normality test)</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGlzdChhcHBsZSlcbmBgYCJ9 -->
-<pre class="r"><code>hist(apple)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuaGlzdChhcHBsZSlcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r hist(apple)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGlzdChnb29nbGUpXG5gYGAifQ== -->
-<pre class="r"><code>hist(google)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuaGlzdChnb29nbGUpXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r hist(google)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Alternatively, we can test if the data are normally distributed using an Anderson-Darling normality test. The null hypothesis in this test is that the data is normally distributed.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQoJ0FwcGxlIG5vcm1hbGl0eSB0ZXN0JylcbnByaW50KGFkLnRlc3QoYXBwbGUpKVxucHJpbnQoJ0dvb2dsZSBub3JtYWxpdHkgdGVzdCcpXG5wcmludChhZC50ZXN0KGdvb2dsZSkpXG5gYGAifQ== -->
-<pre class="r"><code>print('Apple normality test')
-print(ad.test(apple))
-print('Google normality test')
-print(ad.test(google))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucHJpbnQoJ0FwcGxlIG5vcm1hbGl0eSB0ZXN0JylcbnByaW50KGFkLnRlc3QoYXBwbGUpKVxucHJpbnQoJ0dvb2dsZSBub3JtYWxpdHkgdGVzdCcpXG5wcmludChhZC50ZXN0KGdvb2dsZSkpXG5gYGBcbmBgYCJ9 -->
+<p><code>r</code>r print(‘Apple normality test’) print(ad.test(apple)) print(‘Google normality test’) print(ad.test(google))</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Finally, we can use a Mann-Whitney U test is the data is not normally distributed.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud2lsY294LnRlc3QoYXBwbGUsIGdvb2dsZSlcbmBgYCJ9 -->
-<pre class="r"><code>wilcox.test(apple, google)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxud2lsY294LnRlc3QoYXBwbGUsIGdvb2dsZSlcbmBgYFxuYGBgIn0= -->
+<p><code>r</code>r wilcox.test(apple, google)</p>
+<pre><code></code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -740,7 +687,7 @@ print(ad.test(google))</code></pre>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAnU3RhdHMgaW4gUiAtIExldmVsIDEnCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KIyBIeXBvdGhlc2lzIHRlc3RpbmcgYW5kIHN0YXRpc3RpY2FsIGFuYWx5c2lzClNvIGZhciB3ZSBoYXZlIGV4cGxvcmVkIGhvdyB0byBsb2FkLCBjbGVhbiBhbmQgc3VtbWFyaXNlIGRhdGEgaW4gUHl0aG9uLiBJbiB0aGlzIG1vZHVsZSwgd2UgYXJlIGdvaW5nIHRvIGxlYXJuIGhvdyB0byB0ZXN0IGh5cG90aGVzZXMgdXNpbmcgc2V2ZXJhbCBtZXRob2RzLgoKKipCcmllZioqCgpEaWQgQXBwbGUgU3RvcmUgYXBwcyByZWNlaXZlIGJldHRlciByZXZpZXdzIHRoYW4gR29vZ2xlIFBsYXkgYXBwcz8KCiMjIFRoZSBjaGFsbGVuZ2VzIG9mIHRoZSB3b3Jrc2hvcCBhcmU6CgoxLiBDbGVhbiB0aGUgdHdvIGRhdGEgc2V0cwogICAgKiBMb2FkIHRoZSB0d28gZGF0YSBzZXRzCiAgICAqIFBpY2sgdGhlIGNvbHVtbnMgdGhhdCB3ZSBhcmUgZ29pbmcgdG8gd29yayB3aXRoIAogICAgKiBDaGVjayB0aGUgZGF0YSB0eXBlcyBhbmQgZml4IHRoZW0KICAgICogQ3JlYXRlIGEgY29sdW1uIGNhbGxlZCBwbGF0Zm9ybSB3aG9zZSB2YWx1ZXMgYXJlICdhcHBsZScgb3IgJ2dvb2dsZScKMi4gSm9pbiB0aGUgdHdvIGRhdGEgc2V0cwogICAgKiBUbyBkbyB0aGF0IHVzZSB0aGUgZnVuY3Rpb24gYGJpbmRfcm93c2AKICAgICogRWxpbWluYXRlIHRoZSBgTmFOYCB2YWx1ZXMKICAgICogT25seSB1c2UgdGhlIGFwcHMgd2hpY2ggY29udGFpbiByZXZpZXdzCjMuIFN1bW1hcmlzZSB0aGUgZGF0YSB2aXN1YWxseSBhbmQgYW5hbHl0aWNhbGx5IChieSB0aGUgY29sdW1uIGBwbGF0Zm9ybWApCiAgICAqIFVzZSB0aGUgZnVuY3Rpb24gc3VtbWFyeSgpCiAgICAqIFVzZSBhIGJveHBsb3QKNC4gVGVzdCB0aGUgZm9sbG93aW5nIGh5cG90aGVzaXMgJ1RoZSBkaWZmZXJlbmNlcyBpbiB0aGUgYXZlcmFnZSByYXRpbmdzIG9mIGFwcGxlIGFuZCBnb29nbGUgdXNlcnMgYXJlIGR1ZSB0byBjaGFuY2UgYW5kIG5vdCBkdWUgdG8gZGlmZmVyZW5jZXMgaW4gdGhlIHBsYXRmb3JtcycgCiAgICAqIExldOKAmXMgdXNlIHRyYWRpdGlvbmFsIG1ldGhvZHM6IHBhcmFtZXRyaWMgYW5kIG5vbi1wYXJhbWV0cmljCiAgICAqIExldOKAmXMgdXNlIHBlcm11dGF0aW9ucwoKQXMgeW91IGFyZSBnb2luZyB0byBzZWUsIHRoZSBmaXJzdCBzdGVwcyBvZiBldmVyeSBzaW5nbGUgZGF0YSBhbmFseXNpcyBhcmUgbG9hZGluZyBhbmQgY2xlYW5pbmcgdGhlIGRhdGEuIFRvZGF5IGlzIG5vdCBhbiBleGNlcHRpb24sIHNvIHRoYXQgaXMgZ29pbmcgdG8gYmUgb3VyIGZpcnN0IHN0ZXAuCiMjIEltcG9ydGluZyB0aGUgbGlicmFyaWVzCgpJbiB0aGlzIGNhc2UsIHdlIGFyZSBnb2luZyB0byB1c2UgdGhlIHBhY2thZ2VzIGdncGxvdDIsIHRpZHlyLCBkcGx5ciwgc3RyaW5nciwgcmVhZHIgYW5kIG5vcnRlc3QuCmBgYHtyfQpsaWJyYXJ5KGdncGxvdDIpICMgRm9yIHZpc3VhbGlzYXRpb24KbGlicmFyeSh0aWR5cikgIyBUbyB0aWR5IHRoZSBkYXRhCmxpYnJhcnkoZHBseXIpICMgVG8gbWFuaXB1bGF0ZSB0aGUgZGF0YSBmcmFtZXMKbGlicmFyeShzdHJpbmdyKSAjIFRvIG1hbmlwdWxhdGUgbm9uLW51bWVyaWNhbCBkYXRhCmxpYnJhcnkocmVhZHIpICMgVG8gcmVhZCBkYXRhIDopCmxpYnJhcnkobm9ydGVzdCkgIyBUbyB0ZXN0IHRoZSBub3JtYWxpdHkgb2YgdGhlIGRhdGEKYGBgCiMjIENoYWxsZW5nZSAxIC0gIExvYWRpbmcgYW5kIGNsZWFuaW5nIGRhdGEKIyMjIExvYWQgZGF0YQpMb2FkIHRoZSBkYXRhIGZyb20gdGhlIGZvbGRlciBTdGF0cyBpbiB5b3VyIERlc2t0b3AsIHRoaXMgZGF0YSBpcyBmcm9tIHRoZSB3ZWJzaXRlIEthZ2dsZS4gS2FnZ2xlIGlzIGFuIGV4dHJhb3JkaW5hcnkgcmVwb3NpdG9yeSBvZiBkYXRhIGFuZCBnb29kIGZ1biBkYXRhIGNvbXBldGl0aW9ucy4gVGhlIGRhdGEgZnJvbSB0aGUgQXBwbGUgU3RvcmUgY2FuIGJlIGZvdW5kIFtoZXJlXShodHRwczovL3d3dy5rYWdnbGUuY29tL3JhbWFtZXQ0L2FwcC1zdG9yZS1hcHBsZS1kYXRhLXNldC0xMGstYXBwcykgYW5kIHRoZSBkYXRhIGZyb20gR29vZ2xlIFN0b3JlIGNhbiBiZSBmb3VuZCBbaGVyZV0oaHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9sYXZhMTgvZ29vZ2xlLXBsYXktc3RvcmUtYXBwcykuCgpgYGB7cn0KIyBPbmNlIHRoZSBmaWxlIGBnb29nbGVwbGF5c3RvcmUuY3N2YCBpcyBzYXZlZCwgd2UgbmVlZCB0byBsb2FkIGl0IGludG8gUiB1c2luZyByZWFkX2NzdgojIFVzZSB0aGUgZnVuY3Rpb24gcmVhZF9jc3YoKSB0byByZWFkIHRoZSBmaWxlLCBpbnNpZGUgdGhhdCBmdW5jdGlvbiBhZGQgdGhlIHBhdGggb2YgdGhlIGZpbGUgCkdvb2dsZSA8LSByZWFkX2NzdihfIF8gXykKIyBMZXQncyBvYnNlcnZlIHRoZSBmaXJzdCBzZXZlbiBlbnRyaWVzCmhlYWQoXyBfIF8sNykKYGBgCgpgYGB7cn0KIyBPbmNlIHRoZSBmaWxlIGBnb29nbGVwbGF5c3RvcmUuY3N2YCBpcyBzYXZlZCwgd2UgbmVlZCB0byBsb2FkIGl0IGludG8gUiB1c2luZyByZWFkX2NzdgojIFVzZSB0aGUgZnVuY3Rpb24gcmVhZF9jc3YoKSB0byByZWFkIHRoZSBmaWxlLCBpbnNpZGUgdGhhdCBmdW5jdGlvbiBhZGQgdGhlIHBhdGggb2YgdGhlIGZpbGUgCkFwcGxlIDwtICBfIF8gXwojIExldCdzIG9ic2VydmUgdGhlIGZpcnN0IHNldmVuIGVudHJpZXMKaGVhZChfIF8gXykKYGBgCkJhc2VkIG9uIHRoZSBkb2N1bWVudGF0aW9uIG9mIGJvdGggZGF0YSBzZXRzLCB0aGUgbW9zdCBhZGVxdWF0ZSBjb2x1bW5zIHRvIGFuc3dlciB0aGUgYnJpZWYgYXJlOgoKMS4gRm9yIEdvb2dsZToKICAgICogYENhdGVnb3J5YCAjIERvIHdlIG5lZWQgdGhpcz8KICAgICogYFJhdGluZ2AKICAgICogYFJldmlld3NgCiAgICAqIGBQcmljZWAgKG1heWJlKQoyLiBGb3IgQXBwbGU6ICAgIAogICAgKiBgcHJpbWVfZ2VucmVgICMgRG8gd2UgbmVlZCB0aGlzPwogICAgKiBgdXNlcl9yYXRpbmdgIAogICAgKiBgcmF0aW5nX2NvdW50X3RvdGAKICAgICogYHByaWNlYCAobWF5YmUpCiAgICAKIyMjIFN1YnNldHRpbmcKTGV0J3Mgc2VsZWN0IHRoZSBjb2x1bW5zIHRoYXQgd2Ugd2FudCBmb3IgYm90aCBkYXRhIHNldHMuCgpPdmVyd3JpdGUgdGhlIHN1YnNldHMgaW4gdGhlIG9yaWdpbmFsIHZhcmlhYmxlcy4gICAgCmBgYHtyfQojIExldCdzIHN1YnNldCB0aGUgZGF0YWZyYW1lIEFwcGxlIGJ5IG9ubHkgc2VsZWN0aW5nIHRoZSB2YXJpYWJsZXMgYygncHJpbWVfZ2VucmUnLCAndXNlcl9yYXRpbmcnLCAncmF0aW5nX2NvdW50X3RvdCcsICdwcmljZScpCkFwcGxlIDwtICBBcHBsZVtfIF8gX10KIyBBbm90aGVyIG1ldGhvZCB3aXRoIHNlbGVjdCB3aWxsIGJlOiAKIyBBcHBsZSA8LSAgc2VsZWN0KEFwcGxlLCBjKHByaW1lX2dlbnJlLCB1c2VyX3JhdGluZywgcmF0aW5nX2NvdW50X3RvdCwgcHJpY2UpKQojIExldCdzIGNoZWNrIHRoZSBmaXJzdCB0aHJlZSBlbnRyaWVzCmhlYWQoXyBfIF8pCmBgYAoKYGBge3J9CiMgTGV0J3Mgc3Vic2V0IHRoZSBkYXRhZnJhbWUgR29vZ2xlIGJ5IG9ubHkgc2VsZWN0aW5nIHRoZSB2YXJpYWJsZXMgYygnQ2F0ZWdvcnknLCAnUmF0aW5nJywgJ1Jldmlld3MnLCAnUHJpY2UnKQpHb29nbGUgPC0gXyBfIF8KIyBMZXQncyBjaGVjayB0aGUgZmlyc3QgdGhyZWUgZW50cmllcwpoZWFkKF8gXyBfKQpgYGAKCiMjIyBDaGVja2luZyBkYXRhIHR5cGVzIGZvciBib3RoIEFwcGxlIGFuZCBHb29nbGUKSW4gdGhpcyBwYXJ0IGxldCdzIGZpZ3VyZSBvdXQgd2hldGhlciB0aGUgdmFyaWFibGVzIHRoYXQgd2Ugc2VsZWN0ZWQgY29udGFpbiBlcnJvcnMvbWlzdGFrZXMgaW4gdGhlIGV4cGVjdGVkIGRhdGF0eXBlLgoKYGBge3J9CiMgVXNlIHRoZSBmdW5jdGlvbiBnbGltcHNlCiMjIENoZWNrIG91dCB0aGUgZGF0YSB0eXBlcyBvZiB0aGUgZGF0YSBmcmFtZSBBcHBsZS4gQXJlIHRoZSBkYXRhIHR5cGVzIGV4cGVjdGVkPwpnbGltcHNlKEFwcGxlKQpgYGAKQXMgeW91IGNhbiBzZWUgYWxsIHRoZSBkYXRhIHR5cGVzIG9mIGBBcHBsZWAgYXJlIGV4cGVjdGVkLiBXaGF0IGFib3V0IHRoZSBkYXRhIHR5cGVzIG9mIGBHb29nbGVgPwpgYGB7cn0KIyBDaGVjayBvdXQgdGhlIGRhdGEgdHlwZXMgb2YgdGhlIGRhdGEgZnJhbWUgR29vZ2xlLiBBcmUgdGhlIGRhdGEgdHlwZXMgZXhwZWN0ZWQ/CmdsaW1wc2UoXyBfIF8pCmBgYApBcmUgdGhlIGRhdGEgdHlwZXMgZXhwZWN0ZWQ/CkNoZWNrIG91dCB0aGUgdW5pcXVlIHZhbHVlcyBvZiB0aGUgY29sdW1uIFByaWNlIGluIHRoZSBkYXRhIHNldCBHb29nbGUKYGBge3J9CiMgVXNlIHRoZSBmdW5jdGlvbiB1bmlxdWUoKSB0byB0aGUgY29sdW1uIFByaWNlIGluIHRoZSBkYXRhIHNldCBHb29nbGUKdW5pcXVlKEdvb2dsZSRfIF8gXykKYGBgCkludGVyZXN0aW5nLi4uIFRoZXJlIGlzIGEgcHJpY2UgY2FsbGVkIGBFdmVyeW9uZWAuIFRoYXQgaXMgYSBtYXNzaXZlIG1pc3Rha2UuIExldCdzIGNoZWNrIHRoZSBkYXRhIHBvaW50cyB0aGF0IGhhdmUgdGhlIHByaWNlIHZhbHVlIGFzIGBFdmVyeW9uZWAuCmBgYHtyfQojIExldCdzIGNoZWNrIHdoYXQgaXMgdGhlIGRhdGEgcG9pbnQgd2hpY2ggY29udGFpbnMgdGhlIHByaWNlICdFdmVyeW9uZScgdXNpbmcgYSBzdWJzZXQgb2YgR29vZ2xlLgojIyBTdWJzZXQgYnkgdGhlIGNvbHVtbiBQcmljZSB0aGF0IGVxdWFscyB0byBgRXZlcnlvbmVgLgpmaWx0ZXIoR29vZ2xlLCBQcmljZT09IF8gXyBfKQpgYGAKTm93IGl0IGlzIHRpbWUgdG8gZWxpbWluYXRlIHRoYXQgb2JzZXJ2YXRpb24uIApgYGB7cn0KIyBMZXQncyBlbGltaW5hdGUgdGhhdCBwb2ludCBiZWNhdXNlIGl0IGhhcyB0aGUgd3JvbmcgaW5mb3JtYXRpb24uCiMjIFRvIGRvIHRoYXQsIHN1YnNldCBHb29nbGUgYnV0IGluc3RlYWQgb2YgdXNpbmcgJz09LCBpcyBlcXVhbCB0bycgdXNlICdpcyBkaWZmZXJlbnQgZnJvbScgd2hpY2ggaXMgJyE9Jy4KR29vZ2xlIDwtICBmaWx0ZXIoXyBfIF8sIFByaWNlICE9IF8gXyBfKQojIyMgQ2hlY2sgYWdhaW4gdGhlIHVuaXF1ZSB2YWx1ZXMgb2YgUHJpY2UKdW5pcXVlKEdvb2dsZSRQcmljZSkKYGBgCkxldCdzIGNoZWNrIHRoZSBkYXRhIHR5cGVzIG9mIEdvb2dsZS4KYGBge3J9CiMgQ2hlY2stb3V0IHRoZSBkYXRhdHlwZXMgb2YgR29vZ2xlCmdsaW1wc2UoR29vZ2xlKQpgYGAKTm93IHRoZSBwcm9ibGVtIGlzIHRoYXQgdGhlIHByaWNlcyBjb250YWluIHRoZSBzeW1ib2wgYCRgLiBUaGVyZWZvcmUgZm9yIFIsIHRoZXNlIHZhbHVlcyBhcmUgc3RpbGwgY29uc2lkZXJlZCBgc3RyYCBlbGVtZW50cyBhbmQgbm90IG51bWJlcnMhIFNvIGxldCdzIGVsaW1pbmF0ZSB0aGUgZG9sbGFyIHN5bWJvbCBhbmQgY29udmVydCB0aGUgY29sdW1uIGludG8gYSBudW1lcmljIGRhdGEgdHlwZS4KCjEuIENoYW5nZSB0aGUgZG9sbGFyIHN5bWJvbCAKYGBge3J9CiMgVXNlIHRoZSBmdW5jdGlvbiBzYXBwbHkgdG8gZWFjaCBlbGVtZW50IG9mIEdvb2dsZSRQcmljZSwgYXBwbHkgdG8gZWFjaCBlbGVtZW50IHRoZSBmdW5jdGlvbiBzdHJfcmVwbGFjZQojIyBVc2UgcGF0dGVybiA9ICdcXCQnLCByZXBsYWNlbWVudD0gJycKR29vZ2xlJFByaWNlIDwtICBzYXBwbHkoR29vZ2xlJF8gXyBfLCBzdHJfcmVwbGFjZSwgXyBfIF8gPSAnXFwkJywgcmVwbGFjZW1lbnQ9ICcnKQp1bmlxdWUoR29vZ2xlJFByaWNlKQpgYGAKMi4gTWFrZSB0aGUgd2hvbGUgY29sdW1uIGEgbnVtZXJpY2FsIGNvbHVtbgpgYGB7cn0KIyBBcHBseSBhcy5udW1lcmljKCkgdG8gR29vZ2xlJFByaWNlLCBzYXZlIGl0IGFzIHRoZSBQcmljZSBjb2x1bW4gaW4gR29vZ2xlCkdvb2dsZSRQcmljZSA8LSBhcy5udW1lcmljKEdvb2dsZSRfIF8gXykKIyBMZXQncyBoYXZlIGEgZ2xpbXBzZSBvZiBHb29nbGUgZGF0YSB0eXBlcwpnbGltcHNlKEdvb2dsZSkKYGBgClRoZSBjb2x1bW4gYFJldmlld3NgIGlzIHN0aWxsIGFuIG9iamVjdCBjb2x1bW4sIHdlIG5lZWQgdGhhdCBjb2x1bW4gdG8gYmUgYSBudW1lcmljIGNvbHVtbi4KYGBge3J9CiMgVHJhbnNmb3JtIHRoZSBjb2x1bW4gYFJldmlld3NgIHRvIG51bWVyaWMgdXNpbmcgdGhlIGZ1bmN0aW9ucyBhcy5udW1lcmljCkdvb2dsZSRSZXZpZXdzIDwtIGFzLm51bWVyaWMoXyBfIF8pCmBgYApOb3cgbGV0J3MgaGF2ZSBhIGdsaW1wc2Ugb2YgdGhlIGRhdGEKYGBge3J9CiMgTGV0J3MgY2hlY2sgdGhlIGRhdGEgdHlwZXMgb2YgR29vZ2xlIGFnYWluCmdsaW1wc2UoR29vZ2xlKQpgYGAKIyMjIE5ldyBjb2x1bW5zIGZvciBgQXBwbGVgIGFuZCBgR29vZ2xlYCBjYWxsZWQgYHBsYXRmb3JtYApMZXQncyBjcmVhdGUgYSBuZXcgY29sdW1uIGNhbGxlZCBgcGxhdGZvcm1gIHdoZXJlIHRoZSB2YWx1ZSBmb3IgdGhlIEFwcGxlIGRhdGFmcmFtZSBpcyAnYXBwbGUnLCBhbmQgZm9yIEdvb2dsZSBpcyAnZ29vZ2xlJwoKYGBge3J9CiMgTGV0J3MgY3JlYXRlIHRoZSBjb2x1bW4gcGxhdGZvcm0gaW4gQXBwbGUsIHdoaWNoIGFsbCB2YWx1ZXMgYXJlICdhcHBsZScKQXBwbGUkcGxhdGZvcm0gPSAnYXBwbGUnCmhlYWQoQXBwbGUpCmBgYAoKYGBge3J9CiMgTGV0J3MgY3JlYXRlIHRoZSBjb2x1bW4gcGxhdGZvcm0gaW4gR29vZ2xlLCB3aGljaCBhbGwgdmFsdWVzIGFyZSAnZ29vZ2xlJwpHb29nbGUkXyBfIF8gPSAnZ29vZ2xlJwpoZWFkKF8gXyBfKQpgYGAKIyMjIENoYW5naW5nIHRoZSBjb2x1bW4gbmFtZXMgdG8gdW5pZnkgdGhlIHR3byBkYXRhIHNldHMKTm93IHdlIG5lZWQgdG8gcmVuYW1lIHRoZSB2YXJpYWJsZXMgb2YgYEFwcGxlYCB0byBiZSB0aGUgc2FtZSBhcyBgR29vZ2xlYCBvciB2aWNlIHZlcnNhLgpJbiB0aGlzIGNhc2UsIHdlIGFyZSBnb2luZyB0byBjaGFuZ2UgdGhlIGBBcHBsZWAgY29sdW1uIG5hbWVzIHRvIHRoZSBuYW1lcyBvZiBgR29vZ2xlYCBjb2x1bW5zLgoKVGhpcyBpcyBhbiBpbXBvcnRhbnQgc3RlcCB0byB1bmlmeSB0aGUgdHdvIGRhdGEgc2V0cy4KYGBge3J9CiMgQ2hhbmdpbmcgdGhlIGNvbHVtbiBuYW1lcyBvZiBBcHBsZSB3aXRoIHRoZSBjb2x1bW5zIG5hbWVzIG9mIEdvb2dsZQpjb2xuYW1lcyhBcHBsZSkgPC0gIGNvbG5hbWVzKEdvb2dsZSkKYGBgCkxldCdzIGNoZWNrICB0aGUgY29sdW1uIG5hbWVzIG9mIEFwcGxlCmBgYHtyfQpjb2xuYW1lcyhfIF8gXykKYGBgCiMjIENoYWxsZW5nZSAyIC0gIENvbWJpbmUgdGhlIHR3byBkYXRhIHNldHMKQ29tYmluZSB0aGUgdHdvIGRhdGEgc2V0cyBpbnRvIGEgc2luZ2xlIGRhdGEgZnJhbWUgY2FsbGVkIGBkZmAKYGBge3J9CiMgQ29tYmluZSB0aGUgZGF0YSBzZXRzIHVzaW5nIHRoZSBmdW5jdGlvbiAnYmluZF9yb3dzJwojIFRoZSBhcmd1bWVudHMgb2YgdGhhdCBmdW5jdGlvbiBhcmUgdGhlIHR3byBkYXRhIHNldHMgdGhhdCB5b3Ugd2FudCB0byBjb21iaW5lCmRmIDwtIGJpbmRfcm93cyhfIF8gXywgXyBfIF8pCiNMZXQncyBjaGVjayBob3cgdGhlIGRhdGEgcG9pbnRzIGFyZSBjb25jYXRlbmF0ZWQgCnNhbXBsZV9uKF8gXyBfLCAxMCkKYGBgCkFzIHlvdSBjYW4gc2VlIHRoZXJlIGFyZSBzb21lIGBOYU5gIHZhbHVlcywgZWxpbWluYXRlIGFsbCB0aGUgYE5hTmAgdmFsdWVzIGZyb20gdGhlIHRhYmxlCmBgYHtyfQojIExldCdzIGNoZWNrIGZpcnN0IHRoZSBkaW1lbnNpb25zIG9mIGRmIGJlZm9yZSBkcm9wcGluZyBgTmFOYCB2YWx1ZXMKcHJpbnQoZGltKF8gXyBfKSkKIyBVc2UgdGhlIGZ1bmN0aW9uIC5kcm9wbmEgdG8gZWxpbWluYXRlIGFsbCB0aGUgTmFOIHZhbHVlcywgb3ZlcndyaXRlIGluIHRoZSBzYW1lIGRhdGFmcmFtZQpkZiA8LSBkcm9wX25hKF8gXyBfKQojIENoZWNrIHRoZSBkaW1lbnNpb25zIG9mIGRmCl8gXyBfKF8gXyBfKF8gXyBfKSkKYGBgCk5vdyBsZXQncyBjaGVjayBob3cgbWFueSBhcHBzIGhhdmUgMCByZXZpZXdzLgpgYGB7cn0KIyBUbyBjaGVjayBob3cgbWFueSBhcHBzIGhhdmUgMCByZXZpZXdzIHdlIGFyZSBnb2luZyB0byB1c2UgdGhlIGZ1bmN0aW9uIGRpbSBvZiB0aGUgc3Vic2V0IG9mIGRmIHdoZXJlIFJldmlld3MgPT0gMApkaW0oZmlsdGVyKF8gXyBfLCBfIF8gXyA9PSAwKSkKYGBgCjkyOSBhcHBzIGRvIG5vdCBoYXZlIHJldmlld3MsIHdlIG5lZWQgdG8gZWxpbWluYXRlIHRoZXNlIHBvaW50cyEKYGBge3J9CiMgRWxpbWluYXRlIHRoZSBwb2ludHMgdGhhdCBoYXZlIDAgcmV2aWV3cyBieSBzdWJzZXR0aW5nIGRmIHVzaW5nIHRoZSBleHByZXNzaW9uICdkaWZmZXJlbnQgZnJvbScgIT0KIyBPdmVyd3JpdGUgdGhhdCB2YXJpYWJsZQpkZiA8LSAgXyBfIF8oXyBfIF8sIF8gXyBfICE9IDApCnN1bW1hcnkoZGYpCmBgYAojIyBDaGFsbGVuZ2UgMyAtICBTdW1tYXJpc2UgdGhlIGRhdGEgdmlzdWFsbHkgYW5kIGFuYWx5dGljYWxseSAoYnkgdGhlIGNvbHVtbiBgcGxhdGZvcm1gKQojIyMgQW5hbHl0aWNhbCBzdW1tYXJ5CldlIG5lZWQgYSBzdW1tYXJ5IG9mIHRoZSBjb2x1bW4gYFJhdGluZ2AgYnV0IHNlcGFyYXRlZCBieSB0aGUgZGlmZmVyZW50IHBsYXRmb3JtcwpgYGB7cn0KIyBMZXQncyBncm91cCBieSB1c2luZyB0aGUgZnVuY3Rpb24gJ2dyb3VwX2J5JywgZ3JvdXBpbmcgYnkgdGhlIHBsYXRmb3JtLiBTYXZlIGl0IGFzIGdkZi4KZ2RmIDwtIGdyb3VwX2J5KGRmLCBwbGF0Zm9ybSkKIyBMZXQncyB1c2UgdGhlIGZ1bmN0aW9uIHN1bW1hcmlzZSwgY2FsY3VsYXRpbmcgdGhlIGZvbGxvd2luZyBtZXRyaWNzIG9mIFJhdGluZzogbWVhbiwgc3RhbmRhcmQgZGV2aWF0aW9uLCB2YXJpYW5jZSwgYW5kIHRvdGFsIG9ic2VydmF0aW9ucyAgCnN1bW1hcmlzZShnZGYsIG1lYW5fUmF0aW5nID0gbWVhbihfIF8gXyksIHN0ZF9SYXRpbmcgPSBzZChfIF8gXyksIHZhcmlhbmNlID0gdmFyKF8gXyBfKSwgY291bnQgPSBsZW5ndGgoXyBfIF8pICkKYGBgCiMjIyBWaXN1YWwgc3VtbWFyeQpXZSBuZWVkIGEgc3VtbWFyeSBvZiB0aGUgY29sdW1uIGBSYXRpbmdgIGJ1dCBzZXBhcmF0ZWQgYnkgdGhlIGRpZmZlcmVudCBwbGF0Zm9ybXMsIGxldCdzIHVzZSBhIGJveHBsb3QhCmBgYHtyfQojIFVzZSBhIGdncGxvdCB0byB2aXN1bGFsaXNlIHRoZSBkaWZmZXJlbmNlcyBiZXR3ZWVuIHBsYXRmb3JtcyBhbmQgUmF0aW5nCmdncGxvdChkXyBfIF8pICsgZ2VvbV9ib3hwbG90KGFlcyh4ID0gcGxhdGZvcm0sIHkgPSBSYXRpbmcpKQpgYGAKCiMjIENoYWxsZW5nZSA0IC0gIFRlc3Qgd2hldGhlciB0aGVyZSBhcmUgc2lnbmlmaWNhbnQgZGlmZmVyZW5jZXMgYmV0d2VlbiBBcHBsZSBhbmQgR29vZ2xlIHJldmlld3MKVGhlIGZpcnN0IHN0ZXAgdG8gdGVzdCBhIGh5cG90aGVzaXMgaXMgdG8gZGVmaW5lIHRoZSBoeXBvdGhlc2lzIHRoYXQgeW91IHdhbnQgdG8gdGVzdC4gRm9yIHRoYXQgcmVhc29uLCB5b3VyIHRhc2sgaGVyZSBpcyB0byBwcm92aWRlIGEgbnVsbCBhbmQgYW4gYWx0ZXJuYXRpdmUgaHlwb3RoZXNpcyB0byBjb21wbGV0ZSB0aGUgYnJpZWYuCgpIPHN1Yj5udWxsPC9zdWI+OgoKSDxzdWI+YWx0ZXJuYXRpdmU8L3N1Yj46CgpUaGUgc2Vjb25kIHN0ZXAgaXMgdG8gZGV0ZXJtaW5lIHRoZSBzaWduaWZpY2FuY2UgbGV2ZWwuCgpTTDogCgpOb3cgdGhhdCB0aGUgaHlwb3RoZXNlcyBhcmUgZGVmaW5lZCwgYW5kIGFsc28gdGhlIHNpZ25pZmljYW5jZSBsZXZlbCwgd2UgYXJlIGdvaW5nIHRvIHRyeSB0byByZWplY3Qgb3IgYWNjZXB0IHRoZSBudWxsIGh5cG90aGVzaXMuCgpgYGB7cn0KIyBMZXQncyBjcmVhdGUgYSBzdWJzZXQgb2YgdGhlIGNvbHVtbiAnUmF0aW5nJyBieSB0aGUgZGlmZmVyZW50IHBsYXRmb3Jtcy4gCiMjIENhbGwgdGhlIHN1YnNldHMgJ2FwcGxlJyBhbmQgJ2dvb2dsZScgCmFwcGxlIDwtIGZpbHRlcihkZiwgcGxhdGZvcm0gPT0gJ2FwcGxlJykKYXBwbGUgPC0gIGFzLnZlY3RvcihhcHBsZSRSYXRpbmcpCmdvb2dsZSA8LSBmaWx0ZXIoZGYsIHBsYXRmb3JtID09ICdnb29nbGUnKQpnb29nbGUgPC0gIGFzLnZlY3Rvcihnb29nbGUkUmF0aW5nKQpvYnNfZGlmZiAgPC0gIG1lYW4oYXBwbGUpIC0gbWVhbihnb29nbGUpCm9ic19kaWZmCmBgYAojIyMgUGVybXV0YXRpb25zIAoKUGVybXV0YXRpb25zIGFuZCBib290c3RyYXBwaW5nIGFyZSB0aGUgdWx0aW1hdGUgdGVjaG5pcXVlcyB0byB0ZXN0IGRpZmZlcmVuY2VzIGJldHdlZW4gZ3JvdXBzLiBUaGUgZXh0cmFvcmRpbmFyeSBwb3dlciBsaWVzCmluIHRoZSBmYWN0IHRoYXQgdGhlcmUgYXJlIG5vIHByZXZpb3VzIGFzc3VtcHRpb25zLCB0aGVyZWZvcmUgaXQgaXMgdmVyeSBlYXN5IHRvIGFwcGx5IHRvIGFueSBwcm9ibGVtLiAgCkNoZWNrIG91dCBtb3JlIGFib3V0IHBlcm11dGF0aW9ucyBbaGVyZV0oaHR0cDovL3Jhc2J0LmdpdGh1Yi5pby9tbHh0ZW5kL3VzZXJfZ3VpZGUvZXZhbHVhdGUvcGVybXV0YXRpb25fdGVzdC8pCgpgYGB7cn0KI1Blcm11dGF0aW9uIHRlc3QgCnBlcm1sZW5ndGggPSAxMDAgIyB0aGlzIGlzIHRoZSBudW1iZXIgb2YgaXRlcmF0aW9ucyB0aGF0IHdlIGFyZSBnb2luZyB0byBwZXJtdXRlCmRpZmZfbWVhbj0gdmVjdG9yKGxlbmd0aCA9IGxlbmd0aChwZXJtbGVuZ3RoKSkgIyBUaGlzIGlzIGFuIGVtcHR5IHZlY3RvciB3aGVyZSB3ZSBhcmUgZ29pbmcgdG8gc3RvcmUgdGhlIG1lYW4gZGlmZmVyZW5jZXMgCnRvdGFsIDwtIGMoYXBwbGUsZ29vZ2xlKQpmb3IgKGkgaW4gMTpwZXJtbGVuZ3RoKSAjIyBUaGlzIGlzIHRoZSBpdGVyYXRpb25zCnsKICBpbmRfQSA8LSAgc2FtcGxlLmludChsZW5ndGgodG90YWwpLCBzaXplID0gXyBfIF8sIHJlcGxhY2UgPSBUUlVFKQogIGluZF9CIDwtICBzYW1wbGUuaW50KGxlbmd0aCh0b3RhbCksIHNpemUgPSBfIF8gXywgcmVwbGFjZSA9IFRSVUUpCiAgcHJtX2FwcGxlIDwtICB0b3RhbFtfIF8gX10KICBwcm1fZ29vZ2xlIDwtIHRvdGFsW18gXyBfXQogIGRpZmZfbWVhbltpXSA9IG1lYW4ocHJtX2dvb2dsZSkgLSBtZWFuKHBybV9hcHBsZSkgCn0KYGBgCk5vdyBsZXQncyBoYXZlIGEgbG9vayBvZiB0aGUgbnVsbCBkaXN0cmlidXRpb24KYGBge3J9Cm51bGxfZGlzdCA8LSAgYXMuZGF0YS5mcmFtZShkaWZmX21lYW4pCmdncGxvdChudWxsX2Rpc3QpK2dlb21faGlzdG9ncmFtKGFlcyhkaWZmX21lYW4pKQpgYGAKTm93IHRpbWUgdG8gY2FsY3VsYXRlIHRoZSBwLXZhbHVlIGFzc29jaWF0ZWQgdG8gb3VyIG9ic2VydmF0aW9uIQpXZSBvYnNlcnZlZCBhbiBhdmVyYWdlIGRpZmZlcmVuY2Ugb2YgLTAuMTQyMDYwNQpgYGB7cn0KI0hvdyBtYW55IG9ic2VydmF0aW9ucyBhcmUgbW9yZSBuZWdhdGl2ZSB0aGFuIC0wLjE0MjA2MDUKbW9yZV9uZWdhdGl2ZSA8LSAgbGVuZ3RoKF8gXyBfW18gXyBfIDwgb2JzX2RpZmZdKQpwX3ZhbHVlIDwtIG1vcmVfbmVnYXRpdmUvcGVybWxlbmd0aApwX3ZhbHVlCmBgYAoKIyMgVHJhZGl0aW9uYWwgdGVzdHMgCltTdHVkZW50J3MgdC10ZXN0XShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9TdHVkZW50JTI3c190LXRlc3QjSW5kZXBlbmRlbnRfdHdvLXNhbXBsZV90LXRlc3QpIGhlbHBzIHRvIGV2YWx1YXRlIGRpZmZlcmVuY2VzIGJldHdlZW4gdHdvIGluZGVwZW5kZW50IGdyb3Vwcy4gUnVuIGEgU3R1ZGVudCdzIHQtdGVzdCB0byBjb21wYXJlIHRoZSBkaWZmZXJlbmNlcyBiZXR3ZWVuIEFwcGxlIGFuZCBHb29nbGUgcmV2aWV3cy4KCklmIHlvdSBhcmUgZ29pbmcgdG8gdXNlIHRyYWRpdGlvbmFsIG1ldGhvZHMgY2hlY2s6CgoxLiBZb3VyIGRhdGEgaXMgbm9ybWFsbHkgZGlzdHJpYnV0ZWQKCjIuIFlvdXIgdmFyaWFuY2VzIGFyZSBlcXVhbAoKRm9yIHBlZGFnb2dpY2FsIHB1cnBvc2VzIHdlIGFyZSBnb2luZyB0byBzaG93IHlvdSBob3cgdG8gaW1wbGVtZW50IGVhY2ggbWV0aG9kLCBob3dldmVyLCB0aGUgcmVzdWx0cyBhcmUgbm90IGNvcnJlY3QgaWYgeW91ciBkYXRhIGRvIG5vdCBmdWxmaWwgdGhlIGFzc3VtcHRpb25zIGZvciBlYWNoIHRlc3QuCgojIyBTdHVkZW50J3MgdC10ZXN0CkxldCdzIHVzZSBhIFN0dWRlbnQncyB0LXRlc3QgdG8gY2hlY2sgaWYgdGhlcmUgYXJlIGRpZmZlcmVuY2VzIGJldHdlZW4gdGhlIGFwcCByZXZpZXdzIGxlZnQgYnkgQXBwbGUgYW5kIEdvb2dsZSwgdG8gZG8gdGhhdCB3ZSBhcmUgZ29pbmcgdG8gdXNlIHRoZSBmdW5jdGlvbiB0LnRlc3QKCmBgYHtyfQojIFVzZSB0aGUgZnVuY3Rpb24gdC50ZXN0LCBpbiB0aGUgcGFyYW1ldGVycyB0eXBlIGFwcGxlIGFuZCBnb29nbGUsIGFsc28gdGhlIHBhcmFtZXRlciB2YXIuZXF1YWwgdG8gVFJVRQp0LnRlc3QoXyBfIF8sIF8gXyBfLCB2YXIuZXF1YWwgPSBUUlVFKQpgYGAKSXMgdGhhdCB0aGUgcmlnaHQgdGVzdD8gQXMgeW91IGNhbiBzZWUgUiBpcyBub3QgZ29pbmcgdG8gdGVsbCB5b3UgaWYgeW91ciBkYXRhIGZpdCB0aGUgYXNzdW1wdGlvbnMgb2YgdGhlIHRlc3QuIFdlIG5lZWQgdG8gdGVzdCB0aGF0IGFuZCBzZWxlY3QgdGhlIG1vc3QgYWRlcXVhdGUgdGVzdC4KCkxldCdzIGNoZWNrIHRoZSBlcXVhbCB2YXJpYW5jZSBhc3N1bXB0aW9uIAoKYGBge3J9CnZhcihhcHBsZSkKdmFyKGdvb2dsZSkKYGBgCldvdyEgdGhlcmUgYXJlIHF1aXRlIGRpZmZlcmVudCEgTWF5YmUgd2UgY2Fubm90IGFzc3VtZSB0aGF0IHRoZSB2YXJpYW5jZXMgb2YgYm90aCBncm91cHMgYXJlIGVxdWFsISAKWW91IGNhbiBhbHNvIHJ1biBhIHRlc3QgdG8gdmVyaWZ5IHdoZXRoZXIgdGhlcmUgYXJlIHNpZ25pZmljYW50IGRpZmZlcmVuY2VzLgoKU3R1ZGVudCdzIHQtdGVzdCBoYXMgdmVyeSBzdHJvbmcgYXNzdW1wdGlvbnMgdGhhdCB3ZSBwcm9iYWJseSBvdmVybG9va2VkLiBDb3VsZCB5b3Ugd3JpdGUgZG93biB0aGUgYXNzdW1wdGlvbnMgb2YgdGhlIFN0dWRlbnQncyB0LXRlc3Q/IFlvdSBjYW4gZmluZCB0aGVtIFtoZXJlXShodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9TdHVkZW50JTI3c190LXRlc3QjSW5kZXBlbmRlbnRfdHdvLXNhbXBsZV90LXRlc3QpIAoKQXMgeW91IGNhbiBzZWUgU3R1ZGVudCdzIHQtdGVzdCBhc3N1bWVzIHRoYXQgdGhlIHZhcmlhbmNlcyBiZXR3ZWVuIGdyb3VwcyBhcmUgZXF1YWwuIFRoaXMgaXMgbm90IHRoZSBjYXNlIChjaGVjayB0aGUgYW5hbHl0aWNhbCBzdW1tYXJ5KSwgd2UgY2FuIHN0aWxsIHVzZSBXZWxjaOKAmXMgdC10ZXN0IHVzaW5nIHRoZSBzYW1lIGZ1bmN0aW9uIHRoYXQgd2UgdXNlZCBiZWZvcmUuCmBgYHtyfQojIFRvIHJ1biBhIFdlbGNoIHRlc3QgCnQudGVzdChfIF8gXywgXyBfIF8sIHZhci5lcXVhbCA9IEZBTFNFKQpgYGAKQm90aCB0ZXN0cyAoU3R1ZGVudCdzIHQtdGVzdCBhbmQgV2VsY2jigJlzIHQtdGVzdCkgYXNzdW1lIHRoYXQgdGhlIGRhdGEgaXMgbm9ybWFsbHkgZGlzdHJpYnV0ZWQsIHdlIGNhbiB0ZXN0IHRoYXQgbG9va2luZyBhdCB0aGUgZGlzdHJpYnV0aW9uIG9yIHVzaW5nIHRoZSBmdW5jdGlvbiBhZC50ZXN0IChBbmRlcnNvbi1EYXJsaW5nIG5vcm1hbGl0eSB0ZXN0KQpgYGB7cn0KaGlzdChhcHBsZSkKYGBgCgpgYGB7cn0KaGlzdChnb29nbGUpCmBgYApBbHRlcm5hdGl2ZWx5LCB3ZSBjYW4gdGVzdCBpZiB0aGUgZGF0YSBhcmUgbm9ybWFsbHkgZGlzdHJpYnV0ZWQgdXNpbmcgYW4gQW5kZXJzb24tRGFybGluZyBub3JtYWxpdHkgdGVzdC4gVGhlIG51bGwgaHlwb3RoZXNpcyBpbiB0aGlzIHRlc3QgaXMgdGhhdCB0aGUgZGF0YSBpcyBub3JtYWxseSBkaXN0cmlidXRlZC4KYGBge3J9CnByaW50KCdBcHBsZSBub3JtYWxpdHkgdGVzdCcpCnByaW50KGFkLnRlc3QoYXBwbGUpKQpwcmludCgnR29vZ2xlIG5vcm1hbGl0eSB0ZXN0JykKcHJpbnQoYWQudGVzdChnb29nbGUpKQpgYGAKRmluYWxseSwgd2UgY2FuIHVzZSBhIE1hbm4tV2hpdG5leSBVIHRlc3QgaXMgdGhlIGRhdGEgaXMgbm90IG5vcm1hbGx5IGRpc3RyaWJ1dGVkLgpgYGB7cn0Kd2lsY294LnRlc3QoYXBwbGUsIGdvb2dsZSkKYGBgCgpXaGF0IGNhbiB5b3UgY29uY2x1ZGUgYWJvdXQgb3VyIGluaXRpYWwgaHlwb3RoZXNpcz8KCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAnU3RhdHMgaW4gUiAtIExldmVsIDEnCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KIyBIeXBvdGhlc2lzIHRlc3RpbmcgYW5kIHN0YXRpc3RpY2FsIGFuYWx5c2lzClNvIGZhciB3ZSBoYXZlIGV4cGxvcmVkIGhvdyB0byBsb2FkLCBjbGVhbiBhbmQgc3VtbWFyaXNlIGRhdGEgaW4gUHl0aG9uLiBJbiB0aGlzIG1vZHVsZSwgd2UgYXJlIGdvaW5nIHRvIGxlYXJuIGhvdyB0byB0ZXN0IGh5cG90aGVzZXMgdXNpbmcgc2V2ZXJhbCBtZXRob2RzLgoKKipCcmllZioqCgpEaWQgQXBwbGUgU3RvcmUgYXBwcyByZWNlaXZlIGJldHRlciByZXZpZXdzIHRoYW4gR29vZ2xlIFBsYXkgYXBwcz8KCiMjIFRoZSBjaGFsbGVuZ2VzIG9mIHRoZSB3b3Jrc2hvcCBhcmU6CgoxLiBDbGVhbiB0aGUgdHdvIGRhdGEgc2V0cwogICAgKiBMb2FkIHRoZSB0d28gZGF0YSBzZXRzCiAgICAqIFBpY2sgdGhlIGNvbHVtbnMgdGhhdCB3ZSBhcmUgZ29pbmcgdG8gd29yayB3aXRoIAogICAgKiBDaGVjayB0aGUgZGF0YSB0eXBlcyBhbmQgZml4IHRoZW0KICAgICogQ3JlYXRlIGEgY29sdW1uIGNhbGxlZCBwbGF0Zm9ybSB3aG9zZSB2YWx1ZXMgYXJlICdhcHBsZScgb3IgJ2dvb2dsZScKMi4gSm9pbiB0aGUgdHdvIGRhdGEgc2V0cwogICAgKiBUbyBkbyB0aGF0IHVzZSB0aGUgZnVuY3Rpb24gYGJpbmRfcm93c2AKICAgICogRWxpbWluYXRlIHRoZSBgTmFOYCB2YWx1ZXMKICAgICogT25seSB1c2UgdGhlIGFwcHMgd2hpY2ggY29udGFpbiByZXZpZXdzCjMuIFN1bW1hcmlzZSB0aGUgZGF0YSB2aXN1YWxseSBhbmQgYW5hbHl0aWNhbGx5IChieSB0aGUgY29sdW1uIGBwbGF0Zm9ybWApCiAgICAqIFVzZSB0aGUgZnVuY3Rpb24gc3VtbWFyeSgpCiAgICAqIFVzZSBhIGJveHBsb3QKNC4gVGVzdCB0aGUgZm9sbG93aW5nIGh5cG90aGVzaXMgJ1RoZSBkaWZmZXJlbmNlcyBpbiB0aGUgYXZlcmFnZSByYXRpbmdzIG9mIGFwcGxlIGFuZCBnb29nbGUgdXNlcnMgYXJlIGR1ZSB0byBjaGFuY2UgYW5kIG5vdCBkdWUgdG8gZGlmZmVyZW5jZXMgaW4gdGhlIHBsYXRmb3JtcycgCiAgICAqIExldOKAmXMgdXNlIHRyYWRpdGlvbmFsIG1ldGhvZHM6IHBhcmFtZXRyaWMgYW5kIG5vbi1wYXJhbWV0cmljCiAgICAqIExldOKAmXMgdXNlIHBlcm11dGF0aW9ucwoKQXMgeW91IGFyZSBnb2luZyB0byBzZWUsIHRoZSBmaXJzdCBzdGVwcyBvZiBldmVyeSBzaW5nbGUgZGF0YSBhbmFseXNpcyBhcmUgbG9hZGluZyBhbmQgY2xlYW5pbmcgdGhlIGRhdGEuIFRvZGF5IGlzIG5vdCBhbiBleGNlcHRpb24sIHNvIHRoYXQgaXMgZ29pbmcgdG8gYmUgb3VyIGZpcnN0IHN0ZXAuCiMjIEltcG9ydGluZyB0aGUgbGlicmFyaWVzCgpJbiB0aGlzIGNhc2UsIHdlIGFyZSBnb2luZyB0byB1c2UgdGhlIHBhY2thZ2VzIGdncGxvdDIsIHRpZHlyLCBkcGx5ciwgc3RyaW5nciwgcmVhZHIgYW5kIG5vcnRlc3QuCmBgYHtyfQpsaWJyYXJ5KGdncGxvdDIpICMgRm9yIHZpc3VhbGlzYXRpb24KbGlicmFyeSh0aWR5cikgIyBUbyB0aWR5IHRoZSBkYXRhCmxpYnJhcnkoZHBseXIpICMgVG8gbWFuaXB1bGF0ZSB0aGUgZGF0YSBmcmFtZXMKbGlicmFyeShzdHJpbmdyKSAjIFRvIG1hbmlwdWxhdGUgbm9uLW51bWVyaWNhbCBkYXRhCmxpYnJhcnkocmVhZHIpICMgVG8gcmVhZCBkYXRhIDopCmxpYnJhcnkobm9ydGVzdCkgIyBUbyB0ZXN0IHRoZSBub3JtYWxpdHkgb2YgdGhlIGRhdGEKYGBgCiMjIENoYWxsZW5nZSAxIC0gIExvYWRpbmcgYW5kIGNsZWFuaW5nIGRhdGEKIyMjIExvYWQgZGF0YQpMb2FkIHRoZSBkYXRhIGZyb20gdGhlIGZvbGRlciBTdGF0cyBpbiB5b3VyIERlc2t0b3AsIHRoaXMgZGF0YSBpcyBmcm9tIHRoZSB3ZWJzaXRlIEthZ2dsZS4gS2FnZ2xlIGlzIGFuIGV4dHJhb3JkaW5hcnkgcmVwb3NpdG9yeSBvZiBkYXRhIGFuZCBnb29kIGZ1biBkYXRhIGNvbXBldGl0aW9ucy4gVGhlIGRhdGEgZnJvbSB0aGUgQXBwbGUgU3RvcmUgY2FuIGJlIGZvdW5kIFtoZXJlXShodHRwczovL3d3dy5rYWdnbGUuY29tL3JhbWFtZXQ0L2FwcC1zdG9yZS1hcHBsZS1kYXRhLXNldC0xMGstYXBwcykgYW5kIHRoZSBkYXRhIGZyb20gR29vZ2xlIFN0b3JlIGNhbiBiZSBmb3VuZCBbaGVyZV0oaHR0cHM6Ly93d3cua2FnZ2xlLmNvbS9sYXZhMTgvZ29vZ2xlLXBsYXktc3RvcmUtYXBwcykuCgpgYGB7cn0KIyBPbmNlIHRoZSBmaWxlIGBnb29nbGVwbGF5c3RvcmUuY3N2YCBpcyBzYXZlZCwgd2UgbmVlZCB0byBsb2FkIGl0IGludG8gUiB1c2luZyByZWFkX2NzdgojIFVzZSB0aGUgZnVuY3Rpb24gcmVhZF9jc3YoKSB0byByZWFkIHRoZSBmaWxlLCBpbnNpZGUgdGhhdCBmdW5jdGlvbiBhZGQgdGhlIHBhdGggb2YgdGhlIGZpbGUgCkdvb2dsZSA8LSByZWFkX2NzdihfIF8gXykKIyBMZXQncyBvYnNlcnZlIHRoZSBmaXJzdCBzZXZlbiBlbnRyaWVzCmhlYWQoXyBfIF8sNykKYGBgCgpgYGB7cn0KIyBPbmNlIHRoZSBmaWxlIGBnb29nbGVwbGF5c3RvcmUuY3N2YCBpcyBzYXZlZCwgd2UgbmVlZCB0byBsb2FkIGl0IGludG8gUiB1c2luZyByZWFkX2NzdgojIFVzZSB0aGUgZnVuY3Rpb24gcmVhZF9jc3YoKSB0byByZWFkIHRoZSBmaWxlLCBpbnNpZGUgdGhhdCBmdW5jdGlvbiBhZGQgdGhlIHBhdGggb2YgdGhlIGZpbGUgCkFwcGxlIDwtICBfIF8gXwojIExldCdzIG9ic2VydmUgdGhlIGZpcnN0IHNldmVuIGVudHJpZXMKaGVhZChfIF8gXykKYGBgCkJhc2VkIG9uIHRoZSBkb2N1bWVudGF0aW9uIG9mIGJvdGggZGF0YSBzZXRzLCB0aGUgbW9zdCBhZGVxdWF0ZSBjb2x1bW5zIHRvIGFuc3dlciB0aGUgYnJpZWYgYXJlOgoKMS4gRm9yIEdvb2dsZToKICAgICogYENhdGVnb3J5YCAjIERvIHdlIG5lZWQgdGhpcz8KICAgICogYFJhdGluZ2AKICAgICogYFJldmlld3NgCiAgICAqIGBQcmljZWAgKG1heWJlKQoyLiBGb3IgQXBwbGU6ICAgIAogICAgKiBgcHJpbWVfZ2VucmVgICMgRG8gd2UgbmVlZCB0aGlzPwogICAgKiBgdXNlcl9yYXRpbmdgIAogICAgKiBgcmF0aW5nX2NvdW50X3RvdGAKICAgICogYHByaWNlYCAobWF5YmUpCiAgICAKIyMjIFN1YnNldHRpbmcKTGV0J3Mgc2VsZWN0IHRoZSBjb2x1bW5zIHRoYXQgd2Ugd2FudCBmb3IgYm90aCBkYXRhIHNldHMuCgpPdmVyd3JpdGUgdGhlIHN1YnNldHMgaW4gdGhlIG9yaWdpbmFsIHZhcmlhYmxlcy4gICAgCmBgYHtyfQojIExldCdzIHN1YnNldCB0aGUgZGF0YWZyYW1lIEFwcGxlIGJ5IG9ubHkgc2VsZWN0aW5nIHRoZSB2YXJpYWJsZXMgYygncHJpbWVfZ2VucmUnLCAndXNlcl9yYXRpbmcnLCAncmF0aW5nX2NvdW50X3RvdCcsICdwcmljZScpCkFwcGxlIDwtICBBcHBsZVtfIF8gX10KIyBBbm90aGVyIG1ldGhvZCB3aXRoIHNlbGVjdCB3aWxsIGJlOiAKIyBBcHBsZSA8LSAgc2VsZWN0KEFwcGxlLCBjKHByaW1lX2dlbnJlLCB1c2VyX3JhdGluZywgcmF0aW5nX2NvdW50X3RvdCwgcHJpY2UpKQojIExldCdzIGNoZWNrIHRoZSBmaXJzdCB0aHJlZSBlbnRyaWVzCmhlYWQoXyBfIF8pCmBgYAoKYGBge3J9CiMgTGV0J3Mgc3Vic2V0IHRoZSBkYXRhZnJhbWUgR29vZ2xlIGJ5IG9ubHkgc2VsZWN0aW5nIHRoZSB2YXJpYWJsZXMgYygnQ2F0ZWdvcnknLCAnUmF0aW5nJywgJ1Jldmlld3MnLCAnUHJpY2UnKQpHb29nbGUgPC0gXyBfIF8KIyBMZXQncyBjaGVjayB0aGUgZmlyc3QgdGhyZWUgZW50cmllcwpoZWFkKF8gXyBfKQpgYGAKCiMjIyBDaGVja2luZyBkYXRhIHR5cGVzIGZvciBib3RoIEFwcGxlIGFuZCBHb29nbGUKSW4gdGhpcyBwYXJ0IGxldCdzIGZpZ3VyZSBvdXQgd2hldGhlciB0aGUgdmFyaWFibGVzIHRoYXQgd2Ugc2VsZWN0ZWQgY29udGFpbiBlcnJvcnMvbWlzdGFrZXMgaW4gdGhlIGV4cGVjdGVkIGRhdGF0eXBlLgoKYGBge3J9CiMgVXNlIHRoZSBmdW5jdGlvbiBnbGltcHNlCiMjIENoZWNrIG91dCB0aGUgZGF0YSB0eXBlcyBvZiB0aGUgZGF0YSBmcmFtZSBBcHBsZS4gQXJlIHRoZSBkYXRhIHR5cGVzIGV4cGVjdGVkPwpnbGltcHNlKEFwcGxlKQpgYGAKQXMgeW91IGNhbiBzZWUgYWxsIHRoZSBkYXRhIHR5cGVzIG9mIGBBcHBsZWAgYXJlIGV4cGVjdGVkLiBXaGF0IGFib3V0IHRoZSBkYXRhIHR5cGVzIG9mIGBHb29nbGVgPwpgYGB7cn0KIyBDaGVjayBvdXQgdGhlIGRhdGEgdHlwZXMgb2YgdGhlIGRhdGEgZnJhbWUgR29vZ2xlLiBBcmUgdGhlIGRhdGEgdHlwZXMgZXhwZWN0ZWQ/CmdsaW1wc2UoXyBfIF8pCmBgYApBcmUgdGhlIGRhdGEgdHlwZXMgZXhwZWN0ZWQ/CkNoZWNrIG91dCB0aGUgdW5pcXVlIHZhbHVlcyBvZiB0aGUgY29sdW1uIFByaWNlIGluIHRoZSBkYXRhIHNldCBHb29nbGUKYGBge3J9CiMgVXNlIHRoZSBmdW5jdGlvbiB1bmlxdWUoKSB0byB0aGUgY29sdW1uIFByaWNlIGluIHRoZSBkYXRhIHNldCBHb29nbGUKdW5pcXVlKEdvb2dsZSRfIF8gXykKYGBgCkludGVyZXN0aW5nLi4uIFRoZXJlIGlzIGEgcHJpY2UgY2FsbGVkIGBFdmVyeW9uZWAuIFRoYXQgaXMgYSBtYXNzaXZlIG1pc3Rha2UuIExldCdzIGNoZWNrIHRoZSBkYXRhIHBvaW50cyB0aGF0IGhhdmUgdGhlIHByaWNlIHZhbHVlIGFzIGBFdmVyeW9uZWAuCmBgYHtyfQojIExldCdzIGNoZWNrIHdoYXQgaXMgdGhlIGRhdGEgcG9pbnQgd2hpY2ggY29udGFpbnMgdGhlIHByaWNlICdFdmVyeW9uZScgdXNpbmcgYSBzdWJzZXQgb2YgR29vZ2xlLgojIyBTdWJzZXQgYnkgdGhlIGNvbHVtbiBQcmljZSB0aGF0IGVxdWFscyB0byBgRXZlcnlvbmVgLgpmaWx0ZXIoR29vZ2xlLCBQcmljZT09IF8gXyBfKQpgYGAKTm93IGl0IGlzIHRpbWUgdG8gZWxpbWluYXRlIHRoYXQgb2JzZXJ2YXRpb24uIApgYGB7cn0KIyBMZXQncyBlbGltaW5hdGUgdGhhdCBwb2ludCBiZWNhdXNlIGl0IGhhcyB0aGUgd3JvbmcgaW5mb3JtYXRpb24uCiMjIFRvIGRvIHRoYXQsIHN1YnNldCBHb29nbGUgYnV0IGluc3RlYWQgb2YgdXNpbmcgJz09LCBpcyBlcXVhbCB0bycgdXNlICdpcyBkaWZmZXJlbnQgZnJvbScgd2hpY2ggaXMgJyE9Jy4KR29vZ2xlIDwtICBmaWx0ZXIoXyBfIF8sIFByaWNlICE9IF8gXyBfKQojIyMgQ2hlY2sgYWdhaW4gdGhlIHVuaXF1ZSB2YWx1ZXMgb2YgUHJpY2UKdW5pcXVlKEdvb2dsZSRQcmljZSkKYGBgCkxldCdzIGNoZWNrIHRoZSBkYXRhIHR5cGVzIG9mIEdvb2dsZS4KYGBge3J9CiMgQ2hlY2stb3V0IHRoZSBkYXRhdHlwZXMgb2YgR29vZ2xlCmdsaW1wc2UoR29vZ2xlKQpgYGAKTm93IHRoZSBwcm9ibGVtIGlzIHRoYXQgdGhlIHByaWNlcyBjb250YWluIHRoZSBzeW1ib2wgYCRgLiBUaGVyZWZvcmUgZm9yIFIsIHRoZXNlIHZhbHVlcyBhcmUgc3RpbGwgY29uc2lkZXJlZCBgc3RyYCBlbGVtZW50cyBhbmQgbm90IG51bWJlcnMhIFNvIGxldCdzIGVsaW1pbmF0ZSB0aGUgZG9sbGFyIHN5bWJvbCBhbmQgY29udmVydCB0aGUgY29sdW1uIGludG8gYSBudW1lcmljIGRhdGEgdHlwZS4KCjEuIENoYW5nZSB0aGUgZG9sbGFyIHN5bWJvbCAKYGBge3J9CiMgVXNlIHRoZSBmdW5jdGlvbiBzYXBwbHkgdG8gZWFjaCBlbGVtZW50IG9mIEdvb2dsZSRQcmljZSwgYXBwbHkgdG8gZWFjaCBlbGVtZW50IHRoZSBmdW5jdGlvbiBzdHJfcmVwbGFjZQojIyBVc2UgcGF0dGVybiA9ICdcXCQnLCByZXBsYWNlbWVudD0gJycKR29vZ2xlJFByaWNlIDwtICBzYXBwbHkoR29vZ2xlJF8gXyBfLCBzdHJfcmVwbGFjZSwgXyBfIF8gPSAnXFwkJywgcmVwbGFjZW1lbnQ9ICcnKQp1bmlxdWUoR29vZ2xlJFByaWNlKQpgYGAKMi4gTWFrZSB0aGUgd2hvbGUgY29sdW1uIGEgbnVtZXJpY2FsIGNvbHVtbgpgYGB7cn0KIyBBcHBseSBhcy5udW1lcmljKCkgdG8gR29vZ2xlJFByaWNlLCBzYXZlIGl0IGFzIHRoZSBQcmljZSBjb2x1bW4gaW4gR29vZ2xlCkdvb2dsZSRQcmljZSA8LSBhcy5udW1lcmljKEdvb2dsZSRfIF8gXykKIyBMZXQncyBoYXZlIGEgZ2xpbXBzZSBvZiBHb29nbGUgZGF0YSB0eXBlcwpnbGltcHNlKEdvb2dsZSkKYGBgClRoZSBjb2x1bW4gYFJldmlld3NgIGlzIHN0aWxsIGFuIG9iamVjdCBjb2x1bW4sIHdlIG5lZWQgdGhhdCBjb2x1bW4gdG8gYmUgYSBudW1lcmljIGNvbHVtbi4KYGBge3J9CiMgVHJhbnNmb3JtIHRoZSBjb2x1bW4gYFJldmlld3NgIHRvIG51bWVyaWMgdXNpbmcgdGhlIGZ1bmN0aW9ucyBhcy5udW1lcmljCkdvb2dsZSRSZXZpZXdzIDwtIGFzLm51bWVyaWMoXyBfIF8pCmBgYApOb3cgbGV0J3MgaGF2ZSBhIGdsaW1wc2Ugb2YgdGhlIGRhdGEKYGBge3J9CiMgTGV0J3MgY2hlY2sgdGhlIGRhdGEgdHlwZXMgb2YgR29vZ2xlIGFnYWluCmdsaW1wc2UoR29vZ2xlKQpgYGAKIyMjIE5ldyBjb2x1bW5zIGZvciBgQXBwbGVgIGFuZCBgR29vZ2xlYCBjYWxsZWQgYHBsYXRmb3JtYApMZXQncyBjcmVhdGUgYSBuZXcgY29sdW1uIGNhbGxlZCBgcGxhdGZvcm1gIHdoZXJlIHRoZSB2YWx1ZSBmb3IgdGhlIEFwcGxlIGRhdGFmcmFtZSBpcyAnYXBwbGUnLCBhbmQgZm9yIEdvb2dsZSBpcyAnZ29vZ2xlJwoKYGBge3J9CiMgTGV0J3MgY3JlYXRlIHRoZSBjb2x1bW4gcGxhdGZvcm0gaW4gQXBwbGUsIHdoaWNoIGFsbCB2YWx1ZXMgYXJlICdhcHBsZScKQXBwbGUkcGxhdGZvcm0gPSAnYXBwbGUnCmhlYWQoQXBwbGUpCmBgYAoKYGBge3J9CiMgTGV0J3MgY3JlYXRlIHRoZSBjb2x1bW4gcGxhdGZvcm0gaW4gR29vZ2xlLCB3aGljaCBhbGwgdmFsdWVzIGFyZSAnZ29vZ2xlJwpHb29nbGUkXyBfIF8gPSAnZ29vZ2xlJwpoZWFkKF8gXyBfKQpgYGAKIyMjIENoYW5naW5nIHRoZSBjb2x1bW4gbmFtZXMgdG8gdW5pZnkgdGhlIHR3byBkYXRhIHNldHMKTm93IHdlIG5lZWQgdG8gcmVuYW1lIHRoZSB2YXJpYWJsZXMgb2YgYEFwcGxlYCB0byBiZSB0aGUgc2FtZSBhcyBgR29vZ2xlYCBvciB2aWNlIHZlcnNhLgpJbiB0aGlzIGNhc2UsIHdlIGFyZSBnb2luZyB0byBjaGFuZ2UgdGhlIGBBcHBsZWAgY29sdW1uIG5hbWVzIHRvIHRoZSBuYW1lcyBvZiBgR29vZ2xlYCBjb2x1bW5zLgoKVGhpcyBpcyBhbiBpbXBvcnRhbnQgc3RlcCB0byB1bmlmeSB0aGUgdHdvIGRhdGEgc2V0cy4KYGBge3J9CiMgQ2hhbmdpbmcgdGhlIGNvbHVtbiBuYW1lcyBvZiBBcHBsZSB3aXRoIHRoZSBjb2x1bW5zIG5hbWVzIG9mIEdvb2dsZQpjb2xuYW1lcyhBcHBsZSkgPC0gIGNvbG5hbWVzKEdvb2dsZSkKYGBgCkxldCdzIGNoZWNrICB0aGUgY29sdW1uIG5hbWVzIG9mIEFwcGxlCmBgYHtyfQpjb2xuYW1lcyhfIF8gXykKYGBgCiMjIENoYWxsZW5nZSAyIC0gIENvbWJpbmUgdGhlIHR3byBkYXRhIHNldHMKQ29tYmluZSB0aGUgdHdvIGRhdGEgc2V0cyBpbnRvIGEgc2luZ2xlIGRhdGEgZnJhbWUgY2FsbGVkIGBkZmAKYGBge3J9CiMgQ29tYmluZSB0aGUgZGF0YSBzZXRzIHVzaW5nIHRoZSBmdW5jdGlvbiAnYmluZF9yb3dzJwojIFRoZSBhcmd1bWVudHMgb2YgdGhhdCBmdW5jdGlvbiBhcmUgdGhlIHR3byBkYXRhIHNldHMgdGhhdCB5b3Ugd2FudCB0byBjb21iaW5lCmRmIDwtIGJpbmRfcm93cyhfIF8gXywgXyBfIF8pCiNMZXQncyBjaGVjayBob3cgdGhlIGRhdGEgcG9pbnRzIGFyZSBjb25jYXRlbmF0ZWQgCnNhbXBsZV9uKF8gXyBfLCAxMCkKYGBgCkFzIHlvdSBjYW4gc2VlIHRoZXJlIGFyZSBzb21lIGBOYU5gIHZhbHVlcywgZWxpbWluYXRlIGFsbCB0aGUgYE5hTmAgdmFsdWVzIGZyb20gdGhlIHRhYmxlCmBgYHtyfQojIExldCdzIGNoZWNrIGZpcnN0IHRoZSBkaW1lbnNpb25zIG9mIGRmIGJlZm9yZSBkcm9wcGluZyBgTmFOYCB2YWx1ZXMKcHJpbnQoZGltKF8gXyBfKSkKIyBVc2UgdGhlIGZ1bmN0aW9uIC5kcm9wbmEgdG8gZWxpbWluYXRlIGFsbCB0aGUgTmFOIHZhbHVlcywgb3ZlcndyaXRlIGluIHRoZSBzYW1lIGRhdGFmcmFtZQpkZiA8LSBkcm9wX25hKF8gXyBfKQojIENoZWNrIHRoZSBkaW1lbnNpb25zIG9mIGRmCl8gXyBfKF8gXyBfKF8gXyBfKSkKYGBgCk5vdyBsZXQncyBjaGVjayBob3cgbWFueSBhcHBzIGhhdmUgMCByZXZpZXdzLgpgYGB7cn0KIyBUbyBjaGVjayBob3cgbWFueSBhcHBzIGhhdmUgMCByZXZpZXdzIHdlIGFyZSBnb2luZyB0byB1c2UgdGhlIGZ1bmN0aW9uIGRpbSBvZiB0aGUgc3Vic2V0IG9mIGRmIHdoZXJlIFJldmlld3MgPT0gMApkaW0oZmlsdGVyKF8gXyBfLCBfIF8gXyA9PSAwKSkKYGBgCjkyOSBhcHBzIGRvIG5vdCBoYXZlIHJldmlld3MsIHdlIG5lZWQgdG8gZWxpbWluYXRlIHRoZXNlIHBvaW50cyEKYGBge3J9CiMgRWxpbWluYXRlIHRoZSBwb2ludHMgdGhhdCBoYXZlIDAgcmV2aWV3cyBieSBzdWJzZXR0aW5nIGRmIHVzaW5nIHRoZSBleHByZXNzaW9uICdkaWZmZXJlbnQgZnJvbScgIT0KIyBPdmVyd3JpdGUgdGhhdCB2YXJpYWJsZQpkZiA8LSAgXyBfIF8oXyBfIF8sIF8gXyBfICE9IDApCnN1bW1hcnkoZGYpCmBgYAojIyBDaGFsbGVuZ2UgMyAtICBTdW1tYXJpc2UgdGhlIGRhdGEgdmlzdWFsbHkgYW5kIGFuYWx5dGljYWxseSAoYnkgdGhlIGNvbHVtbiBgcGxhdGZvcm1gKQojIyMgQW5hbHl0aWNhbCBzdW1tYXJ5CldlIG5lZWQgYSBzdW1tYXJ5IG9mIHRoZSBjb2x1bW4gYFJhdGluZ2AgYnV0IHNlcGFyYXRlZCBieSB0aGUgZGlmZmVyZW50IHBsYXRmb3JtcwpgYGB7cn0KIyBMZXQncyBncm91cCBieSB1c2luZyB0aGUgZnVuY3Rpb24gJ2dyb3VwX2J5JywgZ3JvdXBpbmcgYnkgdGhlIHBsYXRmb3JtLiBTYXZlIGl0IGFzIGdkZi4KZ2RmIDwtIGdyb3VwX2J5KGRmLCBwbGF0Zm9ybSkKIyBMZXQncyB1c2UgdGhlIGZ1bmN0aW9uIHN1bW1hcmlzZSwgY2FsY3VsYXRpbmcgdGhlIGZvbGxvd2luZyBtZXRyaWNzIG9mIFJhdGluZzogbWVhbiwgc3RhbmRhcmQgZGV2aWF0aW9uLCB2YXJpYW5jZSwgYW5kIHRvdGFsIG9ic2VydmF0aW9ucyAgCnN1bW1hcmlzZShnZGYsIG1lYW5fUmF0aW5nID0gbWVhbihfIF8gXyksIHN0ZF9SYXRpbmcgPSBzZChfIF8gXyksIHZhcmlhbmNlID0gdmFyKF8gXyBfKSwgY291bnQgPSBsZW5ndGgoXyBfIF8pICkKYGBgCiMjIyBWaXN1YWwgc3VtbWFyeQpXZSBuZWVkIGEgc3VtbWFyeSBvZiB0aGUgY29sdW1uIGBSYXRpbmdgIGJ1dCBzZXBhcmF0ZWQgYnkgdGhlIGRpZmZlcmVudCBwbGF0Zm9ybXMsIGxldCdzIHVzZSBhIGJveHBsb3QhCmBgYHtyfQojIFVzZSBhIGdncGxvdCB0byB2aXN1bGFsaXNlIHRoZSBkaWZmZXJlbmNlcyBiZXR3ZWVuIHBsYXRmb3JtcyBhbmQgUmF0aW5nCmdncGxvdChkXyBfIF8pICsgZ2VvbV9ib3hwbG90KGFlcyh4ID0gcGxhdGZvcm0sIHkgPSBSYXRpbmcpKQpgYGAKCiMjIENoYWxsZW5nZSA0IC0gIFRlc3Qgd2hldGhlciB0aGVyZSBhcmUgc2lnbmlmaWNhbnQgZGlmZmVyZW5jZXMgYmV0d2VlbiBBcHBsZSBhbmQgR29vZ2xlIHJldmlld3MKVGhlIGZpcnN0IHN0ZXAgdG8gdGVzdCBhIGh5cG90aGVzaXMgaXMgdG8gZGVmaW5lIHRoZSBoeXBvdGhlc2lzIHRoYXQgeW91IHdhbnQgdG8gdGVzdC4gRm9yIHRoYXQgcmVhc29uLCB5b3VyIHRhc2sgaGVyZSBpcyB0byBwcm92aWRlIGEgbnVsbCBhbmQgYW4gYWx0ZXJuYXRpdmUgaHlwb3RoZXNpcyB0byBjb21wbGV0ZSB0aGUgYnJpZWYuCgpIPHN1Yj5udWxsPC9zdWI+OgoKSDxzdWI+YWx0ZXJuYXRpdmU8L3N1Yj46CgpUaGUgc2Vjb25kIHN0ZXAgaXMgdG8gZGV0ZXJtaW5lIHRoZSBzaWduaWZpY2FuY2UgbGV2ZWwuCgpTTDogCgpOb3cgdGhhdCB0aGUgaHlwb3RoZXNlcyBhcmUgZGVmaW5lZCwgYW5kIGFsc28gdGhlIHNpZ25pZmljYW5jZSBsZXZlbCwgd2UgYXJlIGdvaW5nIHRvIHRyeSB0byByZWplY3Qgb3IgYWNjZXB0IHRoZSBudWxsIGh5cG90aGVzaXMuCgpgYGB7cn0KIyBMZXQncyBjcmVhdGUgYSBzdWJzZXQgb2YgdGhlIGNvbHVtbiAnUmF0aW5nJyBieSB0aGUgZGlmZmVyZW50IHBsYXRmb3Jtcy4gCiMjIENhbGwgdGhlIHN1YnNldHMgJ2FwcGxlJyBhbmQgJ2dvb2dsZScgCmFwcGxlIDwtIGZpbHRlcihkZiwgcGxhdGZvcm0gPT0gJ2FwcGxlJykKYXBwbGUgPC0gIGFzLnZlY3RvcihhcHBsZSRSYXRpbmcpCmdvb2dsZSA8LSBmaWx0ZXIoZGYsIHBsYXRmb3JtID09ICdnb29nbGUnKQpnb29nbGUgPC0gIGFzLnZlY3Rvcihnb29nbGUkUmF0aW5nKQpvYnNfZGlmZiAgPC0gIG1lYW4oYXBwbGUpIC0gbWVhbihnb29nbGUpCm9ic19kaWZmCmBgYAojIyMgUGVybXV0YXRpb25zIAoKUGVybXV0YXRpb25zIGFuZCBib290c3RyYXBwaW5nIGFyZSB0aGUgdWx0aW1hdGUgdGVjaG5pcXVlcyB0byB0ZXN0IGRpZmZlcmVuY2VzIGJldHdlZW4gZ3JvdXBzLiBUaGUgZXh0cmFvcmRpbmFyeSBwb3dlciBsaWVzCmluIHRoZSBmYWN0IHRoYXQgdGhlcmUgYXJlIG5vIHByZXZpb3VzIGFzc3VtcHRpb25zLCB0aGVyZWZvcmUgaXQgaXMgdmVyeSBlYXN5IHRvIGFwcGx5IHRvIGFueSBwcm9ibGVtLiAgCkNoZWNrIG91dCBtb3JlIGFib3V0IHBlcm11dGF0aW9ucyBbaGVyZV0oaHR0cDovL3Jhc2J0LmdpdGh1Yi5pby9tbHh0ZW5kL3VzZXJfZ3VpZGUvZXZhbHVhdGUvcGVybXV0YXRpb25fdGVzdC8pCgpgYGB7cn0KI1Blcm11dGF0aW9uIHRlc3QgCnBlcm1sZW5ndGggPSAxMDAgIyB0aGlzIGlzIHRoZSBudW1iZXIgb2YgaXRlcmF0aW9ucyB0aGF0IHdlIGFyZSBnb2luZyB0byBwZXJtdXRlCmRpZmZfbWVhbj0gdmVjdG9yKGxlbmd0aCA9IGxlbmd0aChwZXJtbGVuZ3RoKSkgIyBUaGlzIGlzIGFuIGVtcHR5IHZlY3RvciB3aGVyZSB3ZSBhcmUgZ29pbmcgdG8gc3RvcmUgdGhlIG1lYW4gZGlmZmVyZW5jZXMgCnRvdGFsIDwtIGMoYXBwbGUsZ29vZ2xlKQpmb3IgKGkgaW4gMTpwZXJtbGVuZ3RoKSAjIyBUaGlzIGlzIHRoZSBpdGVyYXRpb25zCnsKICBpbmRfQSA8LSAgc2FtcGxlLmludChsZW5ndGgodG90YWwpLCBzaXplID0gXyBfIF8sIHJlcGxhY2UgPSBGQUxTRSkKICBwcm1fYXBwbGUgPC0gIHRvdGFsW18gXyBfXQogIHBybV9nb29nbGUgPC0gdG90YWxbXyBfIF9dCiAgZGlmZl9tZWFuW2ldID0gbWVhbihwcm1fZ29vZ2xlKSAtIG1lYW4ocHJtX2FwcGxlKSAKfQpgYGAKTm93IGxldCdzIGhhdmUgYSBsb29rIG9mIHRoZSBudWxsIGRpc3RyaWJ1dGlvbgpgYGB7cn0KbnVsbF9kaXN0IDwtICBhcy5kYXRhLmZyYW1lKGRpZmZfbWVhbikKZ2dwbG90KG51bGxfZGlzdCkrZ2VvbV9oaXN0b2dyYW0oYWVzKGRpZmZfbWVhbikpCmBgYApOb3cgdGltZSB0byBjYWxjdWxhdGUgdGhlIHAtdmFsdWUgYXNzb2NpYXRlZCB0byBvdXIgb2JzZXJ2YXRpb24hCldlIG9ic2VydmVkIGFuIGF2ZXJhZ2UgZGlmZmVyZW5jZSBvZiAtMC4xNDIwNjA1CmBgYHtyfQojSG93IG1hbnkgb2JzZXJ2YXRpb25zIGFyZSBtb3JlIG5lZ2F0aXZlIHRoYW4gLTAuMTQyMDYwNQptb3JlX25lZ2F0aXZlIDwtICBsZW5ndGgoXyBfIF9bXyBfIF8gPCBvYnNfZGlmZl0pCnBfdmFsdWUgPC0gbW9yZV9uZWdhdGl2ZS9wZXJtbGVuZ3RoCnBfdmFsdWUKYGBgCgojIyBUcmFkaXRpb25hbCB0ZXN0cyAKW1N0dWRlbnQncyB0LXRlc3RdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1N0dWRlbnQlMjdzX3QtdGVzdCNJbmRlcGVuZGVudF90d28tc2FtcGxlX3QtdGVzdCkgaGVscHMgdG8gZXZhbHVhdGUgZGlmZmVyZW5jZXMgYmV0d2VlbiB0d28gaW5kZXBlbmRlbnQgZ3JvdXBzLiBSdW4gYSBTdHVkZW50J3MgdC10ZXN0IHRvIGNvbXBhcmUgdGhlIGRpZmZlcmVuY2VzIGJldHdlZW4gQXBwbGUgYW5kIEdvb2dsZSByZXZpZXdzLgoKSWYgeW91IGFyZSBnb2luZyB0byB1c2UgdHJhZGl0aW9uYWwgbWV0aG9kcyBjaGVjazoKCjEuIFlvdXIgZGF0YSBpcyBub3JtYWxseSBkaXN0cmlidXRlZAoKMi4gWW91ciB2YXJpYW5jZXMgYXJlIGVxdWFsCgpGb3IgcGVkYWdvZ2ljYWwgcHVycG9zZXMgd2UgYXJlIGdvaW5nIHRvIHNob3cgeW91IGhvdyB0byBpbXBsZW1lbnQgZWFjaCBtZXRob2QsIGhvd2V2ZXIsIHRoZSByZXN1bHRzIGFyZSBub3QgY29ycmVjdCBpZiB5b3VyIGRhdGEgZG8gbm90IGZ1bGZpbCB0aGUgYXNzdW1wdGlvbnMgZm9yIGVhY2ggdGVzdC4KCiMjIFN0dWRlbnQncyB0LXRlc3QKTGV0J3MgdXNlIGEgU3R1ZGVudCdzIHQtdGVzdCB0byBjaGVjayBpZiB0aGVyZSBhcmUgZGlmZmVyZW5jZXMgYmV0d2VlbiB0aGUgYXBwIHJldmlld3MgbGVmdCBieSBBcHBsZSBhbmQgR29vZ2xlLCB0byBkbyB0aGF0IHdlIGFyZSBnb2luZyB0byB1c2UgdGhlIGZ1bmN0aW9uIHQudGVzdAoKYGBge3J9CiMgVXNlIHRoZSBmdW5jdGlvbiB0LnRlc3QsIGluIHRoZSBwYXJhbWV0ZXJzIHR5cGUgYXBwbGUgYW5kIGdvb2dsZSwgYWxzbyB0aGUgcGFyYW1ldGVyIHZhci5lcXVhbCB0byBUUlVFCnQudGVzdChfIF8gXywgXyBfIF8sIHZhci5lcXVhbCA9IFRSVUUpCmBgYApJcyB0aGF0IHRoZSByaWdodCB0ZXN0PyBBcyB5b3UgY2FuIHNlZSBSIGlzIG5vdCBnb2luZyB0byB0ZWxsIHlvdSBpZiB5b3VyIGRhdGEgZml0IHRoZSBhc3N1bXB0aW9ucyBvZiB0aGUgdGVzdC4gV2UgbmVlZCB0byB0ZXN0IHRoYXQgYW5kIHNlbGVjdCB0aGUgbW9zdCBhZGVxdWF0ZSB0ZXN0LgoKTGV0J3MgY2hlY2sgdGhlIGVxdWFsIHZhcmlhbmNlIGFzc3VtcHRpb24gCgpgYGB7cn0KdmFyKGFwcGxlKQp2YXIoZ29vZ2xlKQpgYGAKV293ISB0aGVyZSBhcmUgcXVpdGUgZGlmZmVyZW50ISBNYXliZSB3ZSBjYW5ub3QgYXNzdW1lIHRoYXQgdGhlIHZhcmlhbmNlcyBvZiBib3RoIGdyb3VwcyBhcmUgZXF1YWwhIApZb3UgY2FuIGFsc28gcnVuIGEgdGVzdCB0byB2ZXJpZnkgd2hldGhlciB0aGVyZSBhcmUgc2lnbmlmaWNhbnQgZGlmZmVyZW5jZXMuCgpTdHVkZW50J3MgdC10ZXN0IGhhcyB2ZXJ5IHN0cm9uZyBhc3N1bXB0aW9ucyB0aGF0IHdlIHByb2JhYmx5IG92ZXJsb29rZWQuIENvdWxkIHlvdSB3cml0ZSBkb3duIHRoZSBhc3N1bXB0aW9ucyBvZiB0aGUgU3R1ZGVudCdzIHQtdGVzdD8gWW91IGNhbiBmaW5kIHRoZW0gW2hlcmVdKGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL1N0dWRlbnQlMjdzX3QtdGVzdCNJbmRlcGVuZGVudF90d28tc2FtcGxlX3QtdGVzdCkgCgpBcyB5b3UgY2FuIHNlZSBTdHVkZW50J3MgdC10ZXN0IGFzc3VtZXMgdGhhdCB0aGUgdmFyaWFuY2VzIGJldHdlZW4gZ3JvdXBzIGFyZSBlcXVhbC4gVGhpcyBpcyBub3QgdGhlIGNhc2UgKGNoZWNrIHRoZSBhbmFseXRpY2FsIHN1bW1hcnkpLCB3ZSBjYW4gc3RpbGwgdXNlIFdlbGNo4oCZcyB0LXRlc3QgdXNpbmcgdGhlIHNhbWUgZnVuY3Rpb24gdGhhdCB3ZSB1c2VkIGJlZm9yZS4KYGBge3J9CiMgVG8gcnVuIGEgV2VsY2ggdGVzdCAKdC50ZXN0KF8gXyBfLCBfIF8gXywgdmFyLmVxdWFsID0gRkFMU0UpCmBgYApCb3RoIHRlc3RzIChTdHVkZW50J3MgdC10ZXN0IGFuZCBXZWxjaOKAmXMgdC10ZXN0KSBhc3N1bWUgdGhhdCB0aGUgZGF0YSBpcyBub3JtYWxseSBkaXN0cmlidXRlZCwgd2UgY2FuIHRlc3QgdGhhdCBsb29raW5nIGF0IHRoZSBkaXN0cmlidXRpb24gb3IgdXNpbmcgdGhlIGZ1bmN0aW9uIGFkLnRlc3QgKEFuZGVyc29uLURhcmxpbmcgbm9ybWFsaXR5IHRlc3QpCmBgYHtyfQpoaXN0KGFwcGxlKQpgYGAKCmBgYHtyfQpoaXN0KGdvb2dsZSkKYGBgCkFsdGVybmF0aXZlbHksIHdlIGNhbiB0ZXN0IGlmIHRoZSBkYXRhIGFyZSBub3JtYWxseSBkaXN0cmlidXRlZCB1c2luZyBhbiBBbmRlcnNvbi1EYXJsaW5nIG5vcm1hbGl0eSB0ZXN0LiBUaGUgbnVsbCBoeXBvdGhlc2lzIGluIHRoaXMgdGVzdCBpcyB0aGF0IHRoZSBkYXRhIGlzIG5vcm1hbGx5IGRpc3RyaWJ1dGVkLgpgYGB7cn0KcHJpbnQoJ0FwcGxlIG5vcm1hbGl0eSB0ZXN0JykKcHJpbnQoYWQudGVzdChhcHBsZSkpCnByaW50KCdHb29nbGUgbm9ybWFsaXR5IHRlc3QnKQpwcmludChhZC50ZXN0KGdvb2dsZSkpCmBgYApGaW5hbGx5LCB3ZSBjYW4gdXNlIGEgTWFubi1XaGl0bmV5IFUgdGVzdCBpcyB0aGUgZGF0YSBpcyBub3Qgbm9ybWFsbHkgZGlzdHJpYnV0ZWQuCmBgYHtyfQp3aWxjb3gudGVzdChhcHBsZSwgZ29vZ2xlKQpgYGAKCldoYXQgY2FuIHlvdSBjb25jbHVkZSBhYm91dCBvdXIgaW5pdGlhbCBoeXBvdGhlc2lzPwoKCg==</div>
 
 
 
